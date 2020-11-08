@@ -1,4 +1,7 @@
-# Static Web Technologies as Open Infrastructure for Scholarly Communications: A Lesson Plan
+---
+title: Lesson Plan
+weight: 2
+---
 
 ## Introduction
 

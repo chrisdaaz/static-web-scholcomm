@@ -1,5 +1,5 @@
 baseURL: /
-title: Static Web Technologies as Open Infrastructure for Scholarly Communications
+title: Static Web for Scholarly Communications Librarianship
 languageCode: en-us
 theme: hugo-geekdoc
 ignoreFiles: [ "notes.md"]
