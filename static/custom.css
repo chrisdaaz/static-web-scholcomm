@@ -3,7 +3,7 @@ a { color: #1c388e; }
 a:visited { color: #73bfb8 }
 
 /* site header */
-.gdoc-header { background: #e66a4e; border-color: #404040; }
+.gdoc-header { background: #000; border-color: #404040; }
 .gdoc-header__link, .gdoc-header__link:visited { color: #ffffff; }
 
 /* page links */
