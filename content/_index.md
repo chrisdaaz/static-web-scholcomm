@@ -2,7 +2,7 @@
 title: Resources for Scholarly Communications Librarians
 ---
 
-Static websites are useful for helping scholars publish academic and educational information online. Unlike conventional publishing platforms or services, static websites involve much lower hosting and maintenance costs. The trade-off, however, is that it takes a bit more technical knowledge to get started. These resources are here to help with getting started. 
+Static websites are useful for helping scholars publish academic and educational information online. Unlike conventional publishing platforms or services, static websites involve much lower hosting and maintenance costs. The trade-off, however, is that it takes a bit more technical knowledge to get started. These resources are intended to help with getting started on using this powerful technology for scholarly communications librarianship. 
 
 **Contents:**
 
@@ -10,11 +10,9 @@ Static websites are useful for helping scholars publish academic and educational
 
 - A [lesson plan](/lesson-plan/) containing key concepts and activities on how static websites relate to scholarly communications librarianship.
 
-- A step-by-step [tutorial](/tutorial/) on making static websites for library-publishing scenarios. 
+- A step-by-step [tutorial](/tutorial/) on making static websites for library-publishing projects. 
 
-## Introduction
-
-### What makes static websites appealing?
+## What makes static websites appealing?
 
 - They support a variety of digital scholarship and scholarly communications use cases: scholarly monographs, academic journals, digital exhibits, reproducible research, open educational resources, data visualizations, and digital library projects. 
 
@@ -26,7 +24,7 @@ Static websites are useful for helping scholars publish academic and educational
 
 - They are cheaper to maintain and preserve.
 
-### What are the drawbacks?
+## What are the drawbacks?
 
 - They are more difficult to learn. Static websites don't typically include a content management system with an intuitive user interface. Instead, they require direct interaction with files and folders via a text editor and command line interface. On team projects, it makes sense to leave the website work to very few people.
 
@@ -39,3 +37,5 @@ _Note: Some of these drawbacks may actually be benefits._
 ## Credits
 
 As part of the Scholarly Communication Notebook, this work was generously supported by the Institute of Museum and Library Services [LG-36-19-0021-19](https://www.imls.gov/grants/awarded/lg-36-19-0021-19).
+
+- Installing Hugo: https://bwaycer.github.io/hugo_tutorial.hugo/tutorials/installing-on-windows/
