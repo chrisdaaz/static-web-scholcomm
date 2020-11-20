@@ -1,10 +1,9 @@
 ---
 title: "GitHub for Static Web Publishing"
 weight: 20
-notes: "the tutorial will provide students with hands-on experience using the Hugo static site generator for a library-publishing scenario (10). Static site generators are command-line tools that use flat file structures, templates, and data to build websites using modern techniques and standards. Students who complete the tutorial will have enough knowledge to either continue using Hugo or nearly any other open source static site generator because most follow the same patterns and principles (11)."
 ---
 
-This tutorial will step you through the process of creating a static website with [Hugo](https://gohugo.io/) for an academic conference proceedings publication. We'll be using a command line terminal to install software and run commands and a text editor to edit and save plain-text files. 
+This tutorial will step you through the process of creating a static website with the [Hugo](https://gohugo.io/) static site generator. We'll play the role of a scholarly communications librarian providing an academic department with a conference proceedings publication. We'll be using a command line terminal to install software and run commands and a text editor to edit and save plain-text files. This in-depth tutotial is estimate to take between two and three hours to complete.
 
 {{< toc >}}
 

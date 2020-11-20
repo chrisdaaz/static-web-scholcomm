@@ -1,6 +1,8 @@
+html { font-size: 18px; }
+
 /* default link color */
-a { color: #1c388e; }
-a:visited { color: #73bfb8 }
+a { color: #1c388e; font-weight: bold; }
+a:visited { color: #1c388e; font-weight: bold; }
 
 /* site header */
 .gdoc-header { background: #000; border-color: #404040; }
@@ -14,6 +16,8 @@ a:visited { color: #73bfb8 }
 .gdoc-footer { background: #404040; color: #ffffff; }
 .gdoc-footer__link{ color: #fecf50; }
 .gdoc-footer__link:visited, .gdoc-footer__link:hover { color: #fecf50; }
+
+.gdoc-markdown table tr td, .gdoc-markdown table tr th { border: 1px solid #000 }
 
 /* custom shortcodes */
 /* button */
