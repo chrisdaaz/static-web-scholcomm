@@ -1,0 +1,34 @@
+<nav>
+    {{ partial "search" . }}
+
+    <section class="gdoc-nav--main">
+        <h2>Navigation</h2>
+        {{ if .Site.Params.GeekdocMenuBundle }}
+            {{ partial "menu-bundle" (dict "current" . "source" .Site.Data.menu.main.main) }}
+        {{ else }}
+            {{ partial "menu-filetree" . }}
+        {{ end }}
+    </section>
+
+    <section class="gdoc-nav--more">
+        {{ if .Site.Data.menu.more.more }}
+            <h2>More</h2>
+            {{ partial "menu-bundle" (dict "current" . "source" .Site.Data.menu.more.more) }}
+        {{ end }}
+    </section>
+    <hr>
+    <section class="author">
+        <h3>Chris Diaz</h3>
+        <ul>
+            <li>Email</li>
+            <li>Twitter</li>
+            <li>GitHub</li>
+        </ul>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+        <br />
+        <br />
+        <small>
+            This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        </small>
+    </section>
+</nav>
