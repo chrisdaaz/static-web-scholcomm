@@ -4,7 +4,7 @@ weight: 21
 notes: "the tutorial will provide students with hands-on experience using the Hugo static site generator for a library-publishing scenario (10). Static site generators are command-line tools that use flat file structures, templates, and data to build websites using modern techniques and standards. Students who complete the tutorial will have enough knowledge to either continue using Hugo or nearly any other open source static site generator because most follow the same patterns and principles (11)."
 ---
 
-This tutorial will guide you through the process of creating a static website with the [Hugo](https://gohugo.io/) static site generator. We'll play the role of a scholarly communications librarian providing an academic department with a conference proceedings publication. We'll be using a command line terminal to install software and run commands and a text editor to edit and save plain-text files. **This in-depth tutotial is estimated to take between two and three hours to complete.**
+This tutorial will teach you the basics of using a static site generator. We will be using [Hugo](https://gohugo.io/) to build our demonstration site. We'll play the role of a scholarly communications librarian. We'll be using a command line terminal to install software and run commands and a text editor to edit and save plain text files. **This in-depth tutotial is estimated to take between one and two hours to complete.**
 
 While we will be using [Hugo](https://gohugo.io/) as our static site generator, this tutorial is not intended to be a cover the depth and breadth of Hugo. For that, I refer you to the Hugo [documentation](https://gohugo.io/documentation/) and [community](https://discourse.gohugo.io/). Rather, this tutorial is about using static site generators in a library-publishing context. 
 
@@ -14,39 +14,39 @@ While we will be using [Hugo](https://gohugo.io/) as our static site generator, 
 
 ## Library Publishing Scenario: Conference Proceedings
 
-There's an academic department that is hosting a conference on campus. You approach them about depositing conference presentation materials in the institutional repository. The conference will feature research papers, posters, and a data visualization contest. The conference organizers are unimpressed by the institutional repository. They're worried that the conference material will get "buried" among the other types of content in the repository. They want their web presence to look like a professional journal publication with a custom web address. They also want the text of the papers to display on the page in addition to PDF downloads. 
+There's an academic department that is hosting a conference on campus. You approach them about depositing conference presentation materials in the institutional repository. The conference will feature research papers, posters, and a data visualization contest. The conference organizers are unimpressed by the look and feel of the institutional repository. They're worried that the conference material will get "buried" among the other types of content in the repository. They want their web presence to look like a professional publication with a custom web address. They also want the text of the papers to display on the page in addition to PDF downloads. 
 
 ### Local IT Constraints
 
 Institutional repositories can be useful systems for storing and providing long-term public access to documents. They provide obvious benefits to libraries, but faculty and students might struggle to see those benefits. Unfortunately, the complexity of repository systems make them difficult or prohibitively costly to customize for specific collections or content types. It's also generally not a good idea to customize repository systems for edge cases.
 
-Creating a separate website with platforms like WordPress or Drupal can be costly in terms of maintainance (and eventual content migration). In addition to requiring someone to manage the website contents, someone else (usually an IT administrator or vendor) needs to set up a server with application software and a database. Overtime, the server will need -- at a minimum -- software patches to secure the database and user credentials. You can't afford to pay a vendor for hosted solution and you can't get the commitments from IT managers to help you spin up and maintain a new web service. 
+Creating a separate website with platforms like WordPress or Drupal can be costly in terms of maintainance (and eventual content migration). We want to avoid unscheduled downtime and urgent security patches. This is a website that will be updated --at most-- once per year. In addition to requiring someone to manage the website contents, someone else (usually an IT administrator or vendor) needs to set up a server with application software and a database. Overtime, the server will need -- at a minimum -- software patches to secure the database and user credentials. You can't afford to pay a vendor for hosted solution and you can't get the commitments from IT managers to help you spin up and maintain a new web service. 
 
-### Static Websites: An Option with Low IT Costs and High User Satisfaction
+### Static Websites
 
 Static websites can provide custom presentation features for collections stored in a repository. They can be a supplemental publishing layer for a digital repository system without the maintenance overhead of traditional websites. Without a database or cloud-based application software, the security and maintance costs are avoided. 
 
-- **Static Websites:** Collection-level Presentation Layer
-- **Digital Repositories:** Institutional Storage Layer
+We can think about static websites as a new layer of publishing services to our patrons:
 
-Static websites are good options for stable content that doesn't need continuous, on-the-fly updates. They're a great solution for publications that are fixed in time (e.g. academic monograph), updated annually (e.g. open textbook), or semi-annually (e.g. academic journal). Considering the importance of web technologies to open access publsihing, site site generators present a good opportunity for scholarly communications librarians to learn about web standards and best practices. 
+- **Static Websites:** Collection-level presentation layer
+- **Digital Repositories:** Institutional storage layer
+
+Static websites are good options for stable content that doesn't need continuous, on-the-fly updates. They're a great solution for publications that are fixed in time (e.g. academic monograph), updated annually (e.g. open textbook), or semi-annually (e.g. academic journal). Considering the importance of web technologies to open access publishing, site site generators present a good opportunity for scholarly communications librarians to learn about web standards and best practices. 
 
 In this tutorial, we will make a conference proceedings website that links to content stored a repository. Together, the website and the repository will provide stakeholders with a full-featured, preservation-ready scholarly web publication. 
 
 Although we will be using [Hugo](https://gohugo.io/) to build our website, our goals can be achieved using [any static site generator](https://jamstack.org/generators/). While other static site generators are designed with blogs, technical documentation, and e-commerse in mind, Hugo is a general-purpose website building tool with cross-platform compatibility. It has a growing user [community](https://discourse.gohugo.io/) and can easily scale to support websites with thousands of pages, which is partly why it's the basis for some [book publishing tools](https://www.getty.edu/publications/digital/platforms-tools.html). 
 
-## Plain Text
+## Plain Text vs Rich Text 
 
-### Plain Text vs Rich Text 
-
-There are two main types of documents we use to write and edit text: plain-text and rich text. Plain text exposes the raw characters within a document, whereas rich text displays the characters according to formatting rules and styles. 
+There are two main types of documents we use to write and edit text: [plain-text](https://en.wikipedia.org/wiki/Plain_text) and [rich text](https://en.wikipedia.org/wiki/Formatted_text). Plain text exposes the raw, semantic characters within a document, whereas rich text displays the formatting features and styles. 
 
 |            | File Formats            | Editors                    |
 | ---------- | ----------------------- | -------------------------- |
 | Plain text | `.xml`, `.html`, `.md`  | Notepad, TextEdit, VS Code |
 | Rich text  | `.docx`, `.rtf`, `.odt` | Microsoft Word, Scrivener  |
 
-Most of us are trained to use rich text editors: emails, word documents, content management systems. This is for good reason: they're easy to use and we need them for everyday things. For scholarly communications purposes, plain text offers some advantages over rich text. Tenen and Wythoff ([2014](https://doi.org/10.46430/phen0041)) explain the benefits of plain text for the longevity of documents: 
+Most of us are trained to use rich text editors: emails, word documents, content management systems. This is for good reason: they're easy to use and we need them for everyday things. For scholarly communications purposes, plain text offers some advantages over rich text, as Tenen and Wythoff ([2014](https://doi.org/10.46430/phen0041)) explain: 
 
 > Plain text both ensures transparency and answers the standards of long-term preservation. MS Word may go the way of [Word Perfect](https://en.wikipedia.org/wiki/WordPerfect) in the future, but plain text will always remain easy to read, catalog, mine, and transform. Furthermore, plain text enables easy and powerful versioning of the document, which is useful in collaboration and organizing drafts. Your plain text files will be accessible on cell phones, tablets, or, perhaps, on a low-powered terminal in some remote library. Plain text is backwards compatible and future-proof. Whatever software or hardware comes along next, it will be able to understand your plain text files.
 
@@ -60,29 +60,29 @@ Static site generators use plain text in order to separate content from styles. 
 
 Markdown uses a syntax that prioritizes human readability without sacrificing semantic structure. There are numerous tools available that will convert markdown to other formats, such as `.html`, `.docx`, `.pdf`, `.tex`, `.epub`, `.jats`, `.tei`, etc. The most popular markdown conversion tool is [Pandoc](https://pandoc.org/). 
 
-Static site generators all have markdown processors to generate `.html`. Here's a comparison between markdown and the HTML that static site generators render:
+Static site generators all have markdown processors to generate `.html`. Here's a comparison between the markdown inpupt and the HTML output that static site generators make:
 
 **Headings**
 
 ```
-# Site Title
+# Site Title (Heading 1)
 
-## Page Title
+## Page Title (Heading 2)
 
-### Section Heading
+### Section Heading (Heading 3)
 
-#### Subsection Heading
+#### Subsection Heading (Heading 4)
 ```
 
 {{< expand "HTML Output" >}}
 
-# Site Title
+# Site Title (Heading 1)
 
-## Page Title
+## Page Title (Heading 2)
 
-### Section Heading
+### Section Heading (Heading 3)
 
-#### Subsection Heading
+#### Subsection Heading (Heading 4)
 
 {{< /expand >}}
 
@@ -177,9 +177,9 @@ abstract: Libraries that publish scholarly journals, conference proceedings, or 
 ---
 ```
 
-YAML syntax is strict and invalid YAML will break your website. There are a lot of online YAML validation tools you can use if you ever see an error you don't understand. 
+YAML syntax is strict; invalid YAML will break your website. There are a lot of online YAML validation tools you can use if you ever see an error you don't understand. 
 
-One common issue with writing YAML is dealing with punctuation. If any of your YAML values include punctuation, put the entire value in single (`''`)or double quotes (`""`). If the value includes double quotes, wrap the value in single quotes (and vice versa. This will make it explicit to the static site generator that the value is a string (usually, YAML parsers can make this determination, but the quotes will make it explicit). For example:
+One common issue with writing YAML is dealing with punctuation. If any of your YAML values include punctuation, put the entire value in single quotes (`''`) or double quotes (`""`). If the value includes double quotes, wrap the value in single quotes (and vice versa). This will make it explicit to the static site generator that the value is a string (usually, YAML parsers can make this determination, but the quotes will make it explicit). For example:
 
 This will break your website:
 
@@ -200,11 +200,11 @@ title: "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"
 
 There are [a lot of text editors](https://en.wikipedia.org/wiki/List_of_text_editors) we can use to build static websites. Every operating system includes a default plain text editor. [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad) is the default text editor on Windows machines; [TextEdit](https://en.wikipedia.org/wiki/TextEdit) is the default text editor on macOS. Either can be used to write and edit markdown and YAML. 
 
-Selecting a text editor is a matter of personal preference. Most modern text editors can be customized with plugins, themes, and extensions to streamline the workflow and comfort of writing plain text. Syntax highlighting and validation are especially helpful. I recommend [Microsoft's Visual Studio Code (VS Code)](https://code.visualstudio.com/). It's free and open source with [good documentation](https://code.visualstudio.com/docs/introvideos/basics) and a lot of helpful [extensions](https://marketplace.visualstudio.com/vscode) for writing markdown and using static site generators. For this this tutorial (and working with the Hugo static site generator in the future), I recommend installing the [Hugo Language and Syntax Support](https://marketplace.visualstudio.com/items?itemName=budparr.language-hugo-vscode) extension.  
+Selecting a text editor is a matter of personal preference. Most modern text editors can be customized with plugins, themes, and extensions to streamline the workflow and comfort of writing plain text. Syntax highlighting and validation are especially helpful. I recommend [Visual Studio Code (VS Code)](https://code.visualstudio.com/). It's free and open source with [good documentation](https://code.visualstudio.com/docs/introvideos/basics) and a lot of helpful [extensions](https://marketplace.visualstudio.com/vscode) for writing markdown and using static site generators. For this this tutorial (and working with the Hugo static site generator in the future), I recommend installing the [Hugo Language and Syntax Support](https://marketplace.visualstudio.com/items?itemName=budparr.language-hugo-vscode) extension.  
 
 ### The Command Line Interface
 
-Static site generators are programs that run from a computer terminal. Depending on your system, the default program for your terminal interface might be called `Command Prompt` if you're on Windows or `Terminal` if you're on macOS. There are many terminal programs available and they each give you direct access to files and folders on your system. 
+Static site generators are command line programs that you can run from a computer terminal. Depending on your system, the default program for your terminal interface might be called `Command Prompt` if you're on Windows or `Terminal` if you're on macOS. There are many terminal programs available and they each give you direct access to files and folders on your system. 
 
 Here's how to open your default computer terminal program:
 
@@ -295,7 +295,7 @@ Here's a helpful [video on installing Hugo on Windows](https://www.youtube.com/w
 
 {{< tab "macOS" >}}
 
-Here's a helpful [video on installing Hugo on macOS](https://www.youtube.com/watch?v=WvhCGlLcrF8):
+Here's a helpful [video on installing Hugo on macOS](https://www.youtube.com/watch?v=WvhCGlLcrF8).
 
 The easiest way to install Hugo on macOS (and lots of other open source software) is using the Homebrew package manager. Homebrew will download, install, update, and remove software packages with a few simple commands. 
 
@@ -363,9 +363,9 @@ The most up-to-date instructions will be available on the [website](https://brew
 
 ### Files and Folders
 
-Files and folders account for the materiality of static websites before and after they are built. Traditional websites, on the other hand, are databases and servers that _dynamically_ responds to edits within a content management system. 
+Files and folders account for the materiality of static websites before and after they are built. Traditional websites, on the other hand, are databases and servers that _dynamically_ responds to requests from a content management system or web browser. 
 
-Static site generators do not use content management systems. They don't have a graphical user interface and they don't need a database. As far as we're concerned, they're a command we execute in a termal that performs a task on a set of files and folders. 
+Static site generators do not use content management systems. They don't have a graphical user interface and they don't need a database. As far as we're concerned, they're a command we execute in a termal that performs a transformation on a set of files and folders. 
 
 The files and folders we use to _build_ the website are diffent than the files and folders we use to _publish_ the website. Most of our work is concerned with a working directiry of files and folders. Once we're ready, we run a command in our terminal and the static site generator handles the _tranformation_ between the our _working directory_ of files and folders and our _output directory_ of ready-to-publish website files. 
 
@@ -505,7 +505,7 @@ This creates a new directory called `public` containing our website files. These
 
 ## Working with a Static Site Generator: Hugo
 
-**Task:** Download the [exercise files]() and extract them to a directory you can easily access on your machine, such as your "Documents" folder.
+**Task:** Download the [exercise files](https://github.com/chrisdaaz/static-web-scholcomm-exercise-files) and extract them to a directory you can easily access on your machine, such as your "Documents" folder.
 
 - Open the Folder in VS Code
 - Open a Terminal in VS Code: Title menu > `Terminal` > `New Terminal`
@@ -516,9 +516,9 @@ This will ensure that Hugo is installed on your computer and the files are rende
 
 If you got an error running the `hugo server` command, there might have been a problem installing Hugo and adding the `hugo.exe` file to your `PATH` variable. Re-try the installation steps. If that doesn't work, search the web for error messages to troubleshoot the issue. There's always a good chance someone else has run into the same problem!
 
-The exercize files contain the starter files and folders for a basic Hugo project. The folders are organized that separates content from layouts and styles. 
+The exercize files contain the starter files for a basic Hugo project. The folders are organized in a way that separates content from layouts and styles. 
 
-Most people who use static site generators create and edit files in the content folder (`/content/`) and the configuration file (`congig.yml`). Layouts and styles are usually set by a theme. Themes are usually developed for a specific use case (e.g. blog, portfolios, documentation, e-commerce) with features (e.g. search, image galleries, [CSS framework](https://github.com/troxler/awesome-css-frameworks) support).
+Most people who use static site generators create and edit files in the content folder (`/content/`) and the configuration file (`config.yml`). Layouts and styles are usually set by a theme. Themes are usually developed for a specific use case (e.g. blog, portfolios, documentation, e-commerce) with features (e.g. search, image galleries, [CSS framework](https://github.com/troxler/awesome-css-frameworks) support).
 
 The most popular static site generators have numerous themes available for people to use and customize in their websites. The Hugo community has published [a lot of themes](https://themes.gohugo.io/) for anyone to use with their websites. In this tutorial, we'll be using a simplified version of the [Hugo Bulma](https://github.com/jeblister/bulma) theme and the [Bulma](https://bulma.io/) CSS framework. 
 
@@ -663,14 +663,63 @@ One of the primary differences between the `hugo` command and the `hugo server` 
 
 While deploying to a production server can get complicated, we don't need to worry about the server meeting specific software or operating system requirements. We just need to be able to upload static file to it. Here are some popular static website hosting options and some tips on using them:
 
-### GitHub and Netlify
+### GitHub Pages
 
-[GitHub Pages](https://pages.github.com/) (Free): GitHub Pages is a static site hosting service from [GitHub](https://github.com). It's free to use with your GitHub account. You'll need to create a 
+[GitHub](https://github.com) is a platform for hosting [Git](https://git-scm.com/) repositories containing source code for software packages. It's popular website for finding open source projects communicating with users of specific pieces of software. [GitHub Pages](https://pages.github.com/) is a **free** static website hosting service offered to users of the [GitHub](https://github.com) platform. 
 
-[Netlify](https://www.netlify.com/):
+{{< hint danger >}}
 
-[Amazon Web Services](https://aws.amazon.com/getting-started/hands-on/host-static-website/):
+The following steps will show you how to move your website files to GitHub and deployed publicly on GitHub Pages. This is intended to demonstrate the process of moving a locally developed static website online; this is not a recommend workflow for static site deployments (more on that below). 
 
-Reclaim Hosting
+{{< /hint >}}
+
+_In your Hugo Project Files_
+
+- Open the `config.yml` file and edit the `baseURL: https://YOUR_USERNAME.github.io/conference-proceedings/` line where `YOUR_USERNAME` is replaced with your GitHub username 
+- Run: `hugo` to build your site to the `public` directory
+
+_In GitHub_
+
+- Login to GitHub
+- Create a New repository: Title menu `+` > `New Repository`
+- Enter `conference-proceedings` in the `Repository Name` field
+- Click on `Create Repository`; this will display many options to add files to the repository
+- Click on the link that says: `upload an existing file`
+- Upload all of the files within the `public` directory to the Github repository. It is important that the `index.html` file is at the root of your of repository. 
+- Click on the `Commit` button. This will upload your website files, which might take a few moments.
+- When the upload is complete, click on the `Settings` tab
+- Scroll down to the `GitHub Pages` section
+- In the `Source` drop-down menu, select `main`, make sure that `/(root)` path is selected, then click save.
+- This will deploy your website to this URL: `https://YOUR_USERNAME.github.io/conference-proceedings`
+
+Static site generators, like open source software in general, make heavy use of the [Git](https://git-scm.com/) version control software. This is a standard workflow for developing and deploying a static site generated website:
+
+- Create your website's project folder: `hugo new site new-website-name`
+- Change directories into the website folder: `cd new-website-name`
+- Initialize a Git repository: `git init`
+- Create and edit your website locally (just as we did earlier in this tutorial)
+- Upload your local Git repository to GitHub:
+```
+git remote add origin https://github.com/YOUR_USERNAME/new-website-name.git
+git branch -M main
+git push -u origin main
+```
+- Set up an automated deployment workflow that pushes a new build of your website to a server with every change to the git repository on GitHub.
+
+By storing your source code in a GitHub-hosted repository, you can deploy static sites directly to GitHub Pages or third-party services like Netlify for free. 
+
+The Hugo Documentation includes a lot of [hosting and deployment recommendations](https://gohugo.io/hosting-and-deployment/). Many of these options have free tiers, but static website hosting usually only costs a few dollars per month. 
 
 ## Tips for Archiving Static Websites
+
+Static websites themselves are not digital repository or preservation systems. They do, however, provide a few options for creating [OAIS Submission Information Packages (SIPs)](https://en.wikipedia.org/wiki/Open_Archival_Information_System#The_OAIS_environment_and_information_model). In fact, it's possible that static websites are easier to archive than database-driven websites, as Rumianek ([2013](http://www.dlib.org/dlib/january13/rumianek/01rumianek.html)) writes:
+
+> Archiving CMS based websites proves much more difficult, because there may exist different views on the content depending on the browser and/or permissions of each user. Recovering a CMS based website from an archive generated by a crawler is not possible either, since the content archived by the crawler is affected by the crawler's permissions and configuration, and only a single view is archived. Therefore, the database itself is not recoverable.
+
+For static websites, there are two options: "downloading a copy of the files using a crawler, or, by getting a copy of the necessary folders containing all of the files from the site's operator" ([Rumianek 2013](http://www.dlib.org/dlib/january13/rumianek/01rumianek.html)). 
+
+Web archiving tools like [Archive-it](https://archive-it.org/) can be set to crawl the public version of the website. This is a process where a machine visits the website and systemically creates copys of all of the files of the website. As the creator of a static website, you have more flexibility in creating an [OAIS Submission Information Package (SIP)](https://en.wikipedia.org/wiki/Open_Archival_Information_System#The_OAIS_environment_and_information_model):
+
+- **Archiving the public website:** Run the `hugo` command on your completed website, create a `.zip` file of the `/public/` folder, and add it to a digital repository or digital preservation system.
+  
+- **Archiving the source material:** Create a `.zip` file of the entire static site project folder, including the content, layouts, and assets files, and add it to a digital repository or digital preservation system. 
