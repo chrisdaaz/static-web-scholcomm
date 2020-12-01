@@ -20,16 +20,16 @@ There's an academic department that is hosting a conference on campus. You appro
 
 Institutional repositories can be useful systems for storing and providing long-term public access to documents. They provide obvious benefits to libraries, but faculty and students might struggle to see those benefits. Unfortunately, the complexity of repository systems make them difficult or prohibitively costly to customize for specific collections or content types. It's also generally not a good idea to customize repository systems for edge cases.
 
-Creating a separate website with platforms like WordPress or Drupal can be costly in terms of maintainance (and eventual content migration). We want to avoid unscheduled downtime and urgent security patches. This is a website that will be updated --at most-- once per year. In addition to requiring someone to manage the website contents, someone else (usually an IT administrator or vendor) needs to set up a server with application software and a database. Overtime, the server will need -- at a minimum -- software patches to secure the database and user credentials. You can't afford to pay a vendor for hosted solution and you can't get the commitments from IT managers to help you spin up and maintain a new web service. 
+Creating a separate website with platforms like WordPress or Drupal can be costly in terms of maintainance (and eventual content migration). We want to avoid unscheduled downtime and urgent security patches. In addition to requiring someone to manage the website contents, someone else (usually an IT administrator or vendor) needs to set up a server with application software and a database. Overtime, the server will need -- at a minimum -- software patches to secure the database and user credentials. You can't afford to pay a vendor for hosted solution and you can't get the commitments from IT managers to help you spin up and maintain a new web service. 
 
 ### Static Websites
 
 Static websites can provide custom presentation features for collections stored in a repository. They can be a supplemental publishing layer for a digital repository system without the maintenance overhead of traditional websites. Without a database or cloud-based application software, the security and maintance costs are avoided. 
 
-We can think about static websites as a new layer of publishing services to our patrons:
+We can think about static websites as an additional layer of publishing services to our patrons:
 
-- **Static Websites:** Collection-level presentation layer
 - **Digital Repositories:** Institutional storage layer
+- **Static Websites:** Collection-level presentation layer
 
 Static websites are good options for stable content that doesn't need continuous, on-the-fly updates. They're a great solution for publications that are fixed in time (e.g. academic monograph), updated annually (e.g. open textbook), or semi-annually (e.g. academic journal). Considering the importance of web technologies to open access publishing, site site generators present a good opportunity for scholarly communications librarians to learn about web standards and best practices. 
 
@@ -54,15 +54,15 @@ Coming to a plain text editor from a word processing program (like Microsoft Wor
 
 ### Plain Text and Static Site Generators
 
-Static site generators use plain text in order to separate content from styles. Static site generators use [Markdown](https://en.wikipedia.org/wiki/Markdown) as the plain text format for content, such as headings, paragraphs, links, lists, and references, and [YAML](https://en.wikipedia.org/wiki/YAML) for metadata, such as title, author, abstract, date. 
+Static site generators use plain text in order to separate content from styles. Static site generators use [Markdown](https://en.wikipedia.org/wiki/Markdown) as the plain text markup language for content, such as headings, paragraphs, links, lists, and references, and [YAML](https://en.wikipedia.org/wiki/YAML) for metadata, such as title, author, abstract, date. 
 
 #### Content
 
 Markdown uses a syntax that prioritizes human readability without sacrificing semantic structure. There are numerous tools available that will convert markdown to other formats, such as `.html`, `.docx`, `.pdf`, `.tex`, `.epub`, `.jats`, `.tei`, etc. The most popular markdown conversion tool is [Pandoc](https://pandoc.org/). 
 
-Static site generators all have markdown processors to generate `.html`. Here's a comparison between the markdown inpupt and the HTML output that static site generators make:
+Static site generators all have markdown processors to generate `.html`. Below is a comparison between the markdown input and the HTML output that static site generators make. Click the “HTML Output” button in each example to see the HTML output.
 
-**Headings**
+**Markdown input: Headings**
 
 ```
 # Site Title (Heading 1)
@@ -102,7 +102,7 @@ This is _italics_.
 
 {{< /expand >}}
 
-**Links and Images**
+**Markdown input: Links and Images**
 
 ```
 This is [a link](https://example.com)
@@ -122,7 +122,7 @@ This is an Image:
 
 {{< /expand >}}
 
-**Two Paragraphs and a Footnote with a link**
+**Markdown input: Two Paragraphs and a Footnote with a link**
 
 ```
 Bounding ahead in panic surged hundreds of animals of a strange
@@ -310,13 +310,13 @@ The most up-to-date instructions will be available on the [website](https://brew
 xcode-select --install
 ```
 
-- This will install [Apple developer tools](https://developer.apple.com/downloads). Once that's done, copy and past this code into the terminal:
+- This will install [Apple developer tools](https://developer.apple.com/downloads). You might get a message that this is already installed, and that's OK. Once that's done, copy and past this code into the terminal:
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-- This will install and set up Homebrew on your machine. 
+- This will install and set up Homebrew on your machine. You might be prompted to enter a password. This is the password you use to log into your machine.
 
 #### Install Hugo
 
@@ -365,9 +365,9 @@ The most up-to-date instructions will be available on the [website](https://brew
 
 Files and folders account for the materiality of static websites before and after they are built. Traditional websites, on the other hand, are databases and servers that _dynamically_ responds to requests from a content management system or web browser. 
 
-Static site generators do not use content management systems. They don't have a graphical user interface and they don't need a database. As far as we're concerned, they're a command we execute in a termal that performs a transformation on a set of files and folders. 
+Static site generators do not use content management systems. They don't have a graphical user interface and they don't need a database. As far as we're concerned, they're a command we execute in a terminal that performs a transformation on a set of files and folders. 
 
-The files and folders we use to _build_ the website are diffent than the files and folders we use to _publish_ the website. Most of our work is concerned with a working directiry of files and folders. Once we're ready, we run a command in our terminal and the static site generator handles the _tranformation_ between the our _working directory_ of files and folders and our _output directory_ of ready-to-publish website files. 
+The files and folders we use to _build_ the website are diffent than the files and folders we use to _publish_ the website. Most of our editing and management of the site is within a working directory of files and folders. Once we're ready, we run a command in our terminal and the static site generator handles the _tranformation_ between the our _working directory_ of files and folders and our _output directory_ of ready-to-publish website files. 
 
 Here's a comparison between the files and folders for a basic hugo project, before and after transformation (the default _output_ directory in a Hugo project is called `public`):
 
@@ -505,7 +505,9 @@ This creates a new directory called `public` containing our website files. These
 
 ## Working with a Static Site Generator: Hugo
 
-**Task:** Download the [exercise files](https://github.com/chrisdaaz/static-web-scholcomm-exercise-files) and extract them to a directory you can easily access on your machine, such as your "Documents" folder.
+**Task:** Download the [exercise files](https://github.com/chrisdaaz/static-web-scholcomm-exercise-files) from GitHub. You can download the [zip file](https://github.com/chrisdaaz/static-web-scholcomm-exercise-files/archive/main.zip) and extract them to a directory you can easily access on your machine, such as your "Documents" folder.
+
+The exercise files contain the working directory for a Hugo project. After following these steps, you should be able to build and preview a functional website on your computer  with Hugo. 
 
 - Open the Folder in VS Code
 - Open a Terminal in VS Code: Title menu > `Terminal` > `New Terminal`
@@ -516,9 +518,9 @@ This will ensure that Hugo is installed on your computer and the files are rende
 
 If you got an error running the `hugo server` command, there might have been a problem installing Hugo and adding the `hugo.exe` file to your `PATH` variable. Re-try the installation steps. If that doesn't work, search the web for error messages to troubleshoot the issue. There's always a good chance someone else has run into the same problem!
 
-The exercize files contain the starter files for a basic Hugo project. The folders are organized in a way that separates content from layouts and styles. 
+The exercise files contain the starter files for a basic Hugo project. The folders are organized in a way that separates content from layouts and styles. 
 
-Most people who use static site generators create and edit files in the content folder (`/content/`) and the configuration file (`config.yml`). Layouts and styles are usually set by a theme. Themes are usually developed for a specific use case (e.g. blog, portfolios, documentation, e-commerce) with features (e.g. search, image galleries, [CSS framework](https://github.com/troxler/awesome-css-frameworks) support).
+Most people who use static site generators create and edit the Markdown files in the content folder (`/content/`) and the settings in the configuration file (`config.yml`). The other folders in the working directory are used for more advanced features and customizations. For example, the layouts and styles are usually set by a theme. Themes are usually developed for a specific use case (e.g. blog, portfolios, documentation, e-commerce) with features (e.g. search, image galleries, [CSS framework](https://github.com/troxler/awesome-css-frameworks) support).
 
 The most popular static site generators have numerous themes available for people to use and customize in their websites. The Hugo community has published [a lot of themes](https://themes.gohugo.io/) for anyone to use with their websites. In this tutorial, we'll be using a simplified version of the [Hugo Bulma](https://github.com/jeblister/bulma) theme and the [Bulma](https://bulma.io/) CSS framework. 
 
@@ -526,7 +528,7 @@ The most popular static site generators have numerous themes available for peopl
 
 The first file we'll edit is the configuration file: `config.yml`. Hugo allows you to write your configuration files in YAML, JSON, or TOML. Each of these languages have slightly different syntaxes, but they both perform the same functions: storing site-wide settings. 
 
-**Task:** Open the `config.yml` in a text editor and change the `title`, `description`, `institution`, and `publisher` for the conference to these values:
+**Task:** Open the `config.yml` in a text editor, change the `title`, `description`, `institution`, and `publisher` for the conference to the following values:
 
 | Attribute     | Value                                                                        |
 | ------------- | ---------------------------------------------------------------------------- |
@@ -535,7 +537,7 @@ The first file we'll edit is the configuration file: `config.yml`. Hugo allows y
 | `institution` | University College                                                           |
 | `publisher`   | University College Library Press                                             |
 
-When you're done, check out the changes in a web browser. If your local server is still running and the browser is already open to `http://localhost:1313`, the changes should already be there. If not:
+When you're done, save the file (`Ctrl S`). You can check out the changes in a web browser. If your local server is still running and the browser is already open to `http://localhost:1313`, the changes should already be there. If not:
 
 - Open a Terminal in VS Code: Title menu > `Terminal` > `New Terminal`
 - Start the Hugo server to preview the website: `hugo server`
@@ -558,9 +560,9 @@ title:
 authors: ["replace with first author"]
 date: 
 abstract: 
-image_src: https://upload.wikimedia.org/wikipedia/commons/0/06/Supernova_Visualization.jpg
+image_src: 
 image_alt: 
-# License options are: by, by-nc, by-nc-nd, by-nc-sa, by-nd, by-nd-nc, by-sa
+# License options are: by, by-nc, by-nc-nd, by-nc-sa, by-nd, by-nd-nc, by-sa, public domain
 # See Creative Commons website for more info: https://creativecommons.org
 license: 
 ---
@@ -585,7 +587,9 @@ For the `image_src` value, you'll need to find the URL for the image to paste in
 - Paste the File URL in the `image_src` field
 - Write alternative text for the image in the `image_alt` field. If you're interested, here's [guidance on writing `alt` tags for complex images, like data visualizations](https://www.w3.org/WAI/tutorials/images/complex/).
 
-The exercize files already include a template for the visualizations (in `/layouts/visualizations/_index.html`). When you're done creating the pages for the visualizations, you can test to see that everything is working properly by running the `hugo server` command in a terminal and opening a web browser to http://localhost:1313/visualizations/.
+When you're done, you should have two new markdown (`.md`) files in a new `visualizations` folder, which itself is a subfolder of the `content` folder. The exercise files already include a template for rendering the visualizations (in `/layouts/_default/single.html`). If you need to, use the markdown files within the `/papers/` and `/posters/` folders as a reference while you build out the `visualizations` section of the site. 
+
+When you're done creating the pages for the visualizations, you can test to see that everything is working properly by running the `hugo server` command in a terminal and opening a web browser to http://localhost:1313/visualizations/. Make sure that your terminal open to the `static-web-scholcomm-exercise-files` directory for the hugo command to work.
 
 ### Templates
 
