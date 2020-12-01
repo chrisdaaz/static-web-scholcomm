@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Static Site Generators"
-weight: 21
+weight: 12
 notes: "the tutorial will provide students with hands-on experience using the Hugo static site generator for a library-publishing scenario (10). Static site generators are command-line tools that use flat file structures, templates, and data to build websites using modern techniques and standards. Students who complete the tutorial will have enough knowledge to either continue using Hugo or nearly any other open source static site generator because most follow the same patterns and principles (11)."
 ---
 
@@ -12,7 +12,7 @@ While we will be using [Hugo](https://gohugo.io/) as our static site generator, 
 
 {{< toc >}}
 
-## Library Publishing Scenario: Conference Proceedings
+## Scenario: Conference Proceedings
 
 There's an academic department that is hosting a conference on campus. You approach them about depositing conference presentation materials in the institutional repository. The conference will feature research papers, posters, and a data visualization contest. The conference organizers are unimpressed by the look and feel of the institutional repository. They're worried that the conference material will get "buried" among the other types of content in the repository. They want their web presence to look like a professional publication with a custom web address. They also want the text of the papers to display on the page in addition to PDF downloads. 
 

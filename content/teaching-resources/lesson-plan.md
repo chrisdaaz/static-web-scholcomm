@@ -1,6 +1,6 @@
 ---
 title: "Static Websites for Digital Scholarship"
-weight: 10
+weight: 21
 notes: "The lesson plan will include the following elements: an introduction to the topic, learning objectives, examples from academic subject areas, and learning activities. The learning activities will simulate real-world scenarios where knowledge of and experience with static websites may be useful on the job. The scenarios can either be used as discussion questions or homework prompts."
 description: "This Lesson will introduce static website technologies as open infrastructure for scholarly communications."
 ---
