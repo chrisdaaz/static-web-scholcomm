@@ -5,8 +5,6 @@ weight: 20
 
 This tutorial introduces [GitHub](https://github.com/) as a static website publishing platform. No installation of any software is required, however, you will need a GitHub account. **This tutotial is estimated to take between 30 and 60 minutes to complete.**
 
-[GitHub](https://github.com) is a platform for hosting [Git](https://git-scm.com/) repositories containing source code for software packages. It's popular website for finding open source projects and communicating with users of specific software packages. While fine tuned for software development teams, GitHub is increasingly being used for academic research and writing. 
-
 **Topics Covered**
 
 {{< toc >}}
@@ -17,21 +15,25 @@ A faculty member in the social sciences wants to make an open textbook on quanti
 
 ## Git and GitHub
 
-Git is version control software that tracks project files over time. It was developed to help software development teams work on the same projects using a distributed and structured workflow. When Git is initialized on a folder containing project files, the folder becomes a _Git repository_. Git takes snapshots of the project each time someone makes a `commit`. Each `commit` in the project's history measures the difference between snapshots down to the specific line and characters within files. 
+[Git](https://git-scm.com/) is a version control system that tracks project files over time. It was developed to help software development teams work on the same projects using a distributed and structured workflow. When Git is initialized on a project folder, the folder becomes a _Git repository_. Git takes snapshots of the project each time someone makes a `commit`. Each `commit` in the project's history measures the difference between snapshots down to the specific line and characters within files. 
 
-GitHub is a platform for sharing and collaborating on projects that are stored as Git repositories. With GitHub, people can open source their code projects, publish packages, report bugs, request features, and troubleshoot software problems. The collaboration, editorial, and publishing features that GitHub provides to code projects are also available writing and editing plain text because code and plain text are essentially the same thing. 
+[GitHub](https://github.com) is a platform for sharing and collaborating on projects that are stored as Git repositories. With GitHub, people can share their code projects publicly, license their code, publish packages, report bugs, request features, and troubleshoot software problems. The collaboration, editorial, and publishing features that GitHub provides to code projects are also available writing and editing plain text because code and plain text are essentially the same thing. 
 
 Together, Git and GitHub enable people a free method of sharing and publishing their work online. We'll be using GitHub features to create, build, and deploy an open textbook using a template that's available on GitHub.
 
 ## Start with an Open Textbook Template
 
-This tutorial is entirely web-based, so we'll need to have a few browser tabs open to perform a few of the tasks. First, in another browser tab, log in to your [GitHub](https://github.com) account.
+This tutorial is entirely web-based, so we'll need to have a few browser tabs open to perform a few of the tasks. First, in another browser tab, log in to your [GitHub](https://github.com) account. We will copy and adapte an existing git repsository on GitHub in order to make our open textbook.
 
-Next, we will need to "fork" an existing repository. When you create a fork on GitHub, you create a copy of someone elses git repository _on your GitHub account_ in order develop your own version of the project.
+To do this, we will need to "fork" an existing repository. When you create a fork on GitHub, you create a copy of someone elses git repository _on your GitHub account_ in order create your own version of the project.
 
 [This repository](https://github.com/chrisdaaz/minibookdown) contains the code you will need to begin creating your own open textbook. [Visit the repository](https://github.com/chrisdaaz/minibookdown) in your web browser and click on the "Fork" button near the top of the page.
 
+After this step, you should have a repository under your account at a web address that looks like this: `https://github.com/YOUR_USER_NAME/minibookdown`
+
 ## Customize Your Open Textbook
+
+The template repository we forked to your account contains the bare minimum of a [Bookdown](https://bookdown.org) project. Bookdown is a very popular open source tool for writing and publishing technical and scientific books from [R Markdown](https://rmarkdown.rstudio.com/) files. We don't need to know anything about the R programming language or statical computing to use Bookdown for formating and publishing open textbooks. We'll be using Bookdown to create the   
 
 You now have the beginning of an open textbook on your GitHub account. Only you have the ability to edit the files within this open textbook project. GitHub, in addition to being a host for source code files, is also a basic file editing system. 
 

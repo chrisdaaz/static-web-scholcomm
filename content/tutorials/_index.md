@@ -1,3 +1,3 @@
 ---
-title: Learning Resources
+title: Tutorials
 ---

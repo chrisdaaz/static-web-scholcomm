@@ -557,7 +557,7 @@ For more information, see: [Hugo Documentation: Configuration](https://gohugo.io
 ```
 ---
 title: 
-authors: ["replace with first author"]
+authors: ["first_name last_name", "first_name last_name", "first_name last_name"]
 date: 
 abstract: 
 image_src: 
@@ -568,14 +568,14 @@ license:
 ---
 ```
 
-- Add in values for each of the metadata fields within the YAML metadata block
+- Add in values for each of the metadata fields within the YAML metadata block. See below for instructions on how to format the values for each field.
 
 Here's a mapping of Wikimedia image metadata and metadata we're using on the site:
 
 | Wikimedia  | Website                                                                                                                                                 |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`    | File name                                                                                                                                               |
-| `authors`  | Creator. If there's more than one creator, separate each with a comma and enclose in quotations (see: `/content/posters/parking-lot.md` for an example) |
+| `authors`  | Creator. Make sure that all creators are listed within brackets and quotations, separated by commas if there are more than one. For example, a single creator would look like `["first_name last_name"]` whereas multiple creators would look like `["first_name last_name", "first_name last_name", "first_name last_name"]` |
 | `date`     | Date                                                                                                                                                    |
 | `abstract` | Description                                                                                                                                             |
 | `license` | See: [Creative Commons](https://creativecommons.org/licenses/) for options|
