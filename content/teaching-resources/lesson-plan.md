@@ -5,11 +5,53 @@ notes: "The lesson plan will include the following elements: an introduction to 
 description: "This Lesson will introduce static website technologies as open infrastructure for scholarly communications."
 ---
 
-This lesson plan provides an a la carte menu of learning modules for teaching static web technologies for digital scholarship and scholarly communications librarianship. Each topic includes a learning objective and recommended readings, viewings, or tutorials for use in workshops or seminars. 
+This lesson plan provides an assortment of learning modules for teaching static web technologies for digital scholarship and scholarly communications librarianship. Each topic includes a learning objective and recommended readings, viewings, or tutorials for use in workshops or seminars. 
 
 **Topics:**
 
 {{< toc >}}
+
+## Introduction
+
+{{< hint info >}}
+
+**Learning Objective:** Participants will be able to recognize the strengths and limitations that static websites provide scholarly communications librarians.
+
+{{< /hint >}}
+
+Static websites can facilitate the distribution, access, and longevity of digital scholarship. A static website is simply a set of files that exist somewhere on a public web server. While they provide some benefits to librarians who facilitate the dissemination and preservation of the scholarly record, they --by themselves-- are inadequate for satisfying the full range of scholarly communication technology needs.
+
+### Benefits for Digital Scholarship
+
+- Static websites **support a variety of digital scholarship and scholarly communications use cases**, including scholarly monographs, academic journals, digital exhibits, reproducible research, open educational resources, data visualizations, and digital library projects. 
+
+- Static websites are **built on open source software and open web standards**. There's nothing proprietary to the underlying technologies.
+
+- Static websites can be **hosted anywhere**, enabling the freedom to deploy to (and migrate from) any hosting provider. 
+
+- Static websites rely on **fewer pieces of technical infrastructure** than dynamic web platforms: no databases, no software updates, no server maintenance, no security patches
+
+- Static websites are **cheaper to maintain and preserve** than websites run on content management systems
+
+### Challenges and Drawbacks
+
+- Static websites are more difficult to learn _because_ they don't typically include a content management system. Instead, they require direct interaction [plain text](https://en.wikipedia.org/wiki/Plain_text) files via a text editor and command line interface. Static websites _can_ be used with content management systems; however, this usually requires additional configuration. 
+
+- They are more difficult to edit after the work is complete. For scholarly publications and digital scholarship projects, frequent editing and updating may not be a primary concern, but projects involving many content editors with on-the-fly content updates may be better served by a publishing platform with a content management system. 
+
+- They do not support "logged in" user experiences. Static websites are easiest to make when they are public and read-only. Administrative dashboards, analytics, submission management systems, and subscriber content would need to be handled using other services.
+
+- This is not unique to static websites; however, by taking on more control over the semantic markup and styles by editing and developing templates, you assume more responsibility over the usability and accessibility of the website. Using "as-is," warranty-free open source software requires an added level of care over the quality of the code. For example, one cannot assume that a popular open source theme for a static site generator meets your institutions digital accessibility policies. It's your responsibility to test the website and make improvements accordingly.    
+
+Deciding to use a static website for a digital scholarship project requires a thorough understanding of the project's use cases. For example, while static websites may be excellent options for digital exhibits and scholarly web publications, they are not suitable alternatives for repository systems or pre-print servers. 
+
+{{< hint warning >}}
+
+**Recommended Reading:** Newson, Kaitlin. 2017. “[Tools and Workflows for Collaborating on Static Website Projects](https://journal.code4lib.org/articles/12779).” _The Code4Lib Journal_, no. 38 (October). .
+
+Newson introduces static site generators for digital library projects with a case study involving a digitized maps collection. Newsom explains how static site generators work and discusses their advantages and disadvantages for team projects.
+
+{{< /hint >}}
 
 ## Static vs Dynamic Websites
 
@@ -27,13 +69,15 @@ Static websites do not use databases to store content or web servers to dynamica
 
 {{< figure src="http://www.getty.edu/publications/images/digitalpipeline-static.gif" title="Static-site publishing" link="http://www.getty.edu/publications/digital/platforms-tools.html" caption="Content is generated on a computer and uploaded to web server in order to be displayed as-is on the user's device (Image courtesy of Quire by J. Paul Getty Trust)" >}}
 
-Static websites used to make up the majority of the web in the 1990's. People would write HTML code (i.e. "markup") for every page and upload the files to a public web server. Today, people use static site generators to reduce the amount of code needed to create websites. These are command-line tools that fill HTML templates with content in order to build a fully-functioning website that can be uploaded to any web server.
+Static websites used to make up the majority of the web in the 1990's. People would write HTML code (i.e. "markup") for every page and upload the files to a public web server. Today, people use **static site generators** to automate and simplify the process for making websites. "Think of a static site generator as a script which takes in data, content and templates, processes them, and outputs a folder full of all the resultant pages and assets" ([Hawksworth, 2020](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/)). Compared to dynamic website platforms, static site generators are relatively small pieces of open source software we can run on our computers ourselves.
 
 {{< hint warning >}}
 
-**Recommended Reading:** Newson, Kaitlin. 2017. “[Tools and Workflows for Collaborating on Static Website Projects](https://journal.code4lib.org/articles/12779).” _The Code4Lib Journal_, no. 38 (October). .
+**Recommended Readings:** 
 
-Newson introduces static site generators for digital library projects with a case study involving a digitized maps collection. Newsom explains how static site generators work and discusses their advantages and disadvantages for team projects.
+- Hawsworth, Phil. 2020. “[What Is a Static Site Generator? How Do I Find the Best One to Use?](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/)” _Netlify_. Accessed December 3, 2020. _Hawksworth is writing for a developer audience. The blog post does a nice job defining static site generators and recommending some options and resources for selecting one for a project._
+
+- Visconti, Amanda. 2016. “[Building a Static Website with Jekyll and GitHub Pages](https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github-pages).” _Programming Historian_. _Visconti provides a guided lesson on using the [Jekyll](https://jekyllrb.com/) static site generator and [GitHub](https://github.com/) for creating an entirely free, easy-to-maintain, preservation-friendly, secure website over which you have full control, such as a scholarly blog, project website, or online portfolio." The section on "What are static sites, Jekyll, etc. & why might I care?" is an excellent introduction. Jekyll, like Hugo, is an excellent static site generator for digital scholarship use cases._
 
 {{< /hint >}}
 
@@ -63,18 +107,43 @@ _Follow-up activity:_ Examine three publishing tools from the Catalogue in “[M
 
 Static site generators require content and styles to be stored as _plain_ text. There are two main types of documents we use to write and edit text: [plain-text](https://en.wikipedia.org/wiki/Plain_text) and [rich text](https://en.wikipedia.org/wiki/Formatted_text). Most of us are trained to use rich text editors: emails, word documents, content management systems. This is for good reason: they're easy to use and we need them for everyday things. Plain text exposes the raw, semantic characters within a document, whereas rich text displays the formatting features and styles. For librarians, plain text offers some advantages over rich text, as Tenen and Wythoff ([2014](https://doi.org/10.46430/phen0041)) explain: 
 
-> Plain text both ensures transparency and answers the standards of long-term preservation. MS Word may go the way of [Word Perfect](https://en.wikipedia.org/wiki/WordPerfect) in the future, but plain text will always remain easy to read, catalog, mine, and transform. Furthermore, plain text enables easy and powerful versioning of the document, which is useful in collaboration and organizing drafts. Your plain text files will be accessible on cell phones, tablets, or, perhaps, on a low-powered terminal in some remote library. Plain text is backwards compatible and future-proof. Whatever software or hardware comes along next, it will be able to understand your plain text files.
+> Plain text both ensures transparency and answers the standards of long-term preservation. [Microsoft] Word may go the way of [Word Perfect](https://en.wikipedia.org/wiki/WordPerfect) in the future, but plain text will always remain easy to read, catalog, mine, and transform. Furthermore, plain text enables easy and powerful versioning of the document, which is useful in collaboration and organizing drafts. Your plain text files will be accessible on cell phones, tablets, or, perhaps, on a low-powered terminal in some remote library. Plain text is backwards compatible and future-proof. Whatever software or hardware comes along next, it will be able to understand your plain text files.
 
 |            | File Formats            | Editors                    |
 | ---------- | ----------------------- | -------------------------- |
-| Plain text | `.xml`, `.html`, `.md`  | Notepad, TextEdit, VS Code |
-| Rich text  | `.docx`, `.rtf`, `.odt` | Microsoft Word, Scrivener  |
+| Plain text | `.xml`, `.html`, `.md`  | [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad), [TextEdit](https://en.wikipedia.org/wiki/TextEdit), [Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code) |
+| Rich text  | `.docx`, `.rtf`, `.odt` | [Microsoft Word](https://en.wikipedia.org/wiki/Microsoft_Word), [Scrivener](https://en.wikipedia.org/wiki/Scrivener_(software))  |
 
 Coming to a plain text editor from a word processing program (like Microsoft Word), might feel like writing computer code rather than text for humans. That is because there is little material difference between plain text and code. Plain text is the format software developers use to write code. The only differences between code and text is the content and file extension. Plain text editors are not exclusive to writing code or reading data; people can write fiction in plain text ([and some do](https://ianhocking.com/twl/2013/06/22/writing-a-novel-using-markdown/)). 
 
 {{< hint warning >}}
 
-**Recommended Tutorial:** Tenen, Dennis, and Grant Wythoff. 2014. “[Sustainable Authorship in Plain Text Using Pandoc and Markdown](https://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown).” _Programming Historian_, March. 
+**Recommended Reading:** Gil, Alex. 2015. “[The User, the Learner and the Machines We Make](https://go-dh.github.io/mincomp/thoughts/2015/05/21/user-vs-learner/).” _Minimal Computing: A Working Group of GO::DH_. May 21, 2015. _This is the canonical essay on minimal computing in digital humanities. Minimal computing centers around the question, "what do we need?" Scholarly communications librarians need resources for publishing academic texts online in order to be discovered and accessed by the public without restrictions. This can be accomplished with an open source static site generator, basic web hosting, and minimal maintenance costs. Importantly, the essay asks us to "displace [our] reliance on 'user friendly' mechanisms," like content management systems and hosted platforms, for smaller technical infrastructures, like plain-text and static websites, that are cheaper to sustain and easier to preserve._
+
+
+**Recommended Tutorial:** Tenen, Dennis, and Grant Wythoff. 2014. “[Sustainable Authorship in Plain Text Using Pandoc and Markdown](https://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown).” _Programming Historian_, March. _I **strongly** recommend some familiarity with [Pandoc](https://pandoc.org/) for roles or projects involving digital publishing. It was developed with academic writing in mind and is usually a behind-the-scenes piece of software within many digital publishing tools. If you'd prefer not to install Pandoc on your machine, you can use the [Try Pandoc](https://pandoc.org/try/) online tool to convert between plain-text formats._ 
+
+{{< /hint >}}
+
+## Static Websites and Accessibility
+
+Using static site generators on digital projects grant you more control over the structure, organization, look, and feel of the resulting web publication. Working with code helps us deepen our technical skillset and adapt to the emerging needs of scholars. It also increasing our responsibility to ensure that our web publications can be used by everyone. 
+
+{{< hint warning >}}
+
+**Recommended Readings:**
+
+- “[What Is Accessibility?](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility)” n.d. MDN Web Docs. Accessed December 3, 2020.
+
+- “[HTML: A Good Basis for Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML).” n.d. MDN Web Docs. Accessed December 3, 2020.
+
+**Recommending Viewing:** Initiative (WAI), W3C Web Accessibility. 2020. “Web Accessibility Perspectives: Explore the Impact and Benefits for Everyone.” Web Accessibility Initiative (WAI). December 3, 2020. https://www.w3.org/WAI/perspective-videos/.
+
+**Activity**
+
+1. Using [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools/accessibility/reference), visit a website and perform an accessibility audit.
+2. With the same website, use [WAVE](https://wave.webaim.org/) to perform an accessibility audit. 
+3. What were the differences between each tool's evaluations? 
 
 {{< /hint >}}
 
