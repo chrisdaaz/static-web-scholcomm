@@ -29,8 +29,10 @@ a:visited { color: #1c388e; font-weight: bold; }
 .gdoc-hint.warning { background: #fef5dc; border-color: #e4ba48; color: black; }
 .gdoc-hint.danger { background: #fae1db; border-color: #cf5f46; color: black; }
 
-/* author */
-
-.author li {
-    display: inline;
+figure {
+    border: #1c388e solid;
+    background: #e5e6eb;
+    padding: 0.5rem 1em 0.5rem 0.75rem;
+    border-radius: 0.15rem;
+    margin: 1rem 0;
 }
