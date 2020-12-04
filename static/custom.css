@@ -31,8 +31,13 @@ a:visited { color: #1c388e; font-weight: bold; }
 
 figure {
     border: #1c388e solid;
-    background: #e5e6eb;
+    background: rgba(233,236,239,.5);
     padding: 0.5rem 1em 0.5rem 0.75rem;
     border-radius: 0.15rem;
     margin: 1rem 0;
+}
+
+figure img {
+    margin: auto;
+    display: block;
 }
