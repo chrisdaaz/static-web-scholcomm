@@ -655,6 +655,12 @@ Once you've created the file and saved the site, test is by running `hugo server
 
 If you're feeling adventurous, try adding DublinCore metadata to the <head> element of the website. Here's the [DublinCore website](https://www.dublincore.org/) and a [simple DublinCore metadata generator for HTML](https://nsteffel.github.io/dublin_core_generator/generator_nq.html)
 
+{{< hint warning >}}
+
+**Looking for more training and exercises?** Check out the [Getting Started with Static Website Generators](https://github.com/kaitlinnewson/c4l18-workshop-staticweb) workshop by [Kaitlin Newson](https://github.com/kaitlinnewson) and [Kim Pham](https://github.com/kimpham54) from the Code4Lib 2018 conference. 
+
+{{< /hint >}}
+
 ## Tips for Publishing Static Websites to the Web
 
 Static site generators can build your website to a _local_ or _production_ server environment. 
@@ -727,3 +733,4 @@ Web archiving tools like [Archive-it](https://archive-it.org/) can be set to cra
 - **Archiving the public website:** Run the `hugo` command on your completed website, create a `.zip` file of the `/public/` folder, and add it to a digital repository or digital preservation system.
   
 - **Archiving the source material:** Create a `.zip` file of the entire static site project folder, including the content, layouts, and assets files, and add it to a digital repository or digital preservation system. 
+
