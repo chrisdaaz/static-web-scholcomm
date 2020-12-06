@@ -5,6 +5,9 @@ weight: 21
 
 This lesson plan provides an assortment of learning modules for teaching static web technologies for digital scholarship and scholarly communications librarianship. Each topic includes a learning objective and recommended readings, viewings, or tutorials for use in workshops or seminars. 
 
+{{< button href="/lesson-plan.pdf" >}}Download PDF{{< /button >}}
+{{< button href="/lesson-plan.docx" >}}Download DOCX{{< /button >}}
+
 **Topics:**
 
 {{< toc >}}
