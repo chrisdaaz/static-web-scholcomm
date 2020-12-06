@@ -41,3 +41,8 @@ figure img {
     margin: auto;
     display: block;
 }
+
+.gdoc-nav__entry.is-active, .gdoc-nav__entry:hover {
+    text-decoration: none;
+    color: #324b99;
+}

@@ -1,7 +1,6 @@
 ---
 title: "Introduction to Static Site Generators"
 weight: 12
-notes: "the tutorial will provide students with hands-on experience using the Hugo static site generator for a library-publishing scenario (10). Static site generators are command-line tools that use flat file structures, templates, and data to build websites using modern techniques and standards. Students who complete the tutorial will have enough knowledge to either continue using Hugo or nearly any other open source static site generator because most follow the same patterns and principles (11)."
 ---
 
 This tutorial will teach you the basics of using a static site generator. We will be using [Hugo](https://gohugo.io/) to build our demonstration site. We'll play the role of a scholarly communications librarian. We'll be using a command line terminal to install software and run commands and a text editor to edit and save plain text files. **This in-depth tutotial is estimated to take between one and two hours to complete.**
@@ -24,12 +23,18 @@ Creating a separate website with platforms like WordPress or Drupal can be costl
 
 ### Static Websites
 
-Static websites can provide custom presentation features for collections stored in a repository. They can be a supplemental publishing layer for a digital repository system without the maintenance overhead of traditional websites. Without a database or cloud-based application software, the security and maintance costs are avoided. 
-
-We can think about static websites as an additional layer of publishing services to our patrons:
+Static websites can provide custom presentation features for collections stored in a repository. They can be a supplemental publishing layer for a digital repository system without the maintenance overhead of traditional websites. Without a database or cloud-based application software, the security and maintance costs are avoided. We can think about static websites as an additional layer of publishing services to our patrons:
 
 - **Digital Repositories:** Institutional storage layer
 - **Static Websites:** Collection-level presentation layer
+
+{{< hint warning >}}
+
+**Recommended Reading:** Becker, Devin, Evan Williamson, and Olivia Wikle. 2020. “[CollectionBuilder-CONTENTdm: Developing a Static Web ‘Skin’ for CONTENTdm-Based Digital Collections](https://journal.code4lib.org/articles/15326).” The Code4Lib Journal, no. 49 (August).
+
+- While this tutorial focuses on static websites as supplements to institutional repositories, the University of Idaho uses static websites as collection-level presentation layers for their CONTENTdm digital collections system. 
+
+{{< /hint >}}
 
 Static websites are good options for stable content that doesn't need continuous, on-the-fly updates. They're a great solution for publications that are fixed in time (e.g. academic monograph), updated annually (e.g. open textbook), or semi-annually (e.g. academic journal). Considering the importance of web technologies to open access publishing, site site generators present a good opportunity for scholarly communications librarians to learn about web standards and best practices. 
 
@@ -195,6 +200,13 @@ title: "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"
 
 ## Setting Up Your Computer
 
+{{< hint warning >}}
+
+If you're interested, this is an excellent self-guided workshop to anyone interested in refreshing their knowledge on web fundamentals (i.e. HTML, CSS, JavaScript): 
+
+**Williamson, Evan. 2019. “[Web Crash Course! An Intro to Basic Web Concepts Using GitHub and GitHub Pages](https://evanwill.github.io/web-crash-course/).” Web-Crash-Course. 2019.** 
+
+{{< /hint >}}
 
 ### Plain Text Editors
 
