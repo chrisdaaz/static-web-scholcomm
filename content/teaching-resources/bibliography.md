@@ -21,13 +21,13 @@ Diaz, Chris. 2018. “[Using Static Site Generators for Scholarly Publications a
 
 ---
 
-Gil, Alex, and Kaiama L. Glover. 2016. “The Sx:Archipelagos Project](https://hcommons.org/deposits/item/hc:11841/),” Humanitites Commons. 
+Gil, Alex, and Kaiama L. Glover. 2016. “[The Sx:Archipelagos Project](https://hcommons.org/deposits/item/hc:11841/),” Humanitites Commons. 
 
 - This paper reports on the planning and execution of a new platform for publishing peer-reviewed scholarship using minimal computing principles. The platform uses technologies that minimize the social/labor costs of scholarly publihsing, namely plain text (Markdown) and static site generators (Jekyll). The result can be seen in [archipelagos: a journal of Caribbean digital praxis](http://archipelagosjournal.org/) and replicated with their [workflow](http://archipelagosjournal.org/workflow.html)
 
 ---
 
-Gil, Alex. 2015. “[The User, the Learner and the Machines We Make · Minimal Computing](https://go-dh.github.io/mincomp/thoughts/2015/05/21/user-vs-learner/).” Minimal Computing: A Working Group of GO::DH. May 21, 2015.
+Gil, Alex. 2015. “[The User, the Learner and the Machines We Make · Minimal Computing](https://go-dh.github.io/mincomp/thoughts/2015/05/21/user-vs-learner).” Minimal Computing: A Working Group of GO::DH. May 21, 2015.
 
 - This is the canonical essay on minimal computing in digital humanities. Minimal computing centers around the question, "what do we need?" Scholarly communications librarians need resources for publishing academic texts online in order to be discovered and accessed by the public without restrictions. This can be accomplished with an open source static site generator, basic web hosting, and minimal maintenance costs. Importantly, the essay asks us to "displace [our] reliance on 'user friendly' mechanisms," like content management systems and hosted platforms, for smaller technical infrastructures, like plain text and static websites, that are cheaper to sustain and easier to preserve.
 
