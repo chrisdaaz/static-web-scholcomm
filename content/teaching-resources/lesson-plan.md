@@ -1,5 +1,6 @@
 ---
 title: "Lesson Plan"
+author: Chris Diaz
 weight: 21
 ---
 

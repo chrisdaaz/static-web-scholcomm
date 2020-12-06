@@ -14,11 +14,7 @@ Websites for scholarly publications and digital scholarship are expected to be s
 
 This resource was created by [Chris Diaz](https://chrisdaaz.github.io/), Digital Publishing Librarian at Northwestern University. As part of the Scholarly Communication Notebook, this work was generously supported by the Institute of Museum and Library Services [LG-36-19-0021-19](https://www.imls.gov/grants/awarded/lg-36-19-0021-19). Unless otherwise noted, these materials are licensed under [Creative Commons Attribution (CC BY) 4.0 International license](http://creativecommons.org/licenses/by/4.0). 
 
-{{< button relref="/" >}}Download PDF{{< /button >}}
-
-{{< button relref="/" >}}Download Microsoft Word){{< /button >}}
-
-{{< button href="https://github.com/chrisdaaz/static-web-scholcomm/issues" >}}View Source Files{{< /button >}}
+{{< button href="https://github.com/chrisdaaz/static-web-scholcomm/" >}}View Source Files{{< /button >}}
 
 ## Feedback
 

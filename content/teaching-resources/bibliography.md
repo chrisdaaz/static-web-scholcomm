@@ -1,5 +1,6 @@
 ---
 title: Bibliography
+author: Chris Diaz
 weight: 22
 ---
 
