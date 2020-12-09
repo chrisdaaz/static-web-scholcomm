@@ -7,13 +7,18 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-          
+
+      - name: Install pandoc and LaTeX
+        run: |
+          brew install pandoc
+          brew install --cask basictex    
+
       - name: Build Downloads  
         run: bash pdf-docx.sh
 
