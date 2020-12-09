@@ -1,4 +1,4 @@
-baseURL: /
+baseURL: static-web-scholcomm/
 title: Static Web Publishing for Digital Scholarship
 languageCode: en-us
 theme: hugo-geekdoc
