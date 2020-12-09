@@ -109,7 +109,7 @@ Static site generators require content and styles to be stored as _plain_ text. 
 
 > Plain text both ensures transparency and answers the standards of long-term preservation. [Microsoft] Word may go the way of [Word Perfect](https://en.wikipedia.org/wiki/WordPerfect) in the future, but plain text will always remain easy to read, catalog, mine, and transform. Furthermore, plain text enables easy and powerful versioning of the document, which is useful in collaboration and organizing drafts. Your plain text files will be accessible on cell phones, tablets, or, perhaps, on a low-powered terminal in some remote library. Plain text is backwards compatible and future-proof. Whatever software or hardware comes along next, it will be able to understand your plain text files.
 
-|            | File Formats            | Editors                    |
+| File Contents | File Extensions         | Editors                    |
 | ---------- | ----------------------- | -------------------------- |
 | Plain text | `.xml`, `.html`, `.md`  | [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad), [TextEdit](https://en.wikipedia.org/wiki/TextEdit), [Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code) |
 | Rich text  | `.docx`, `.rtf`, `.odt` | [Microsoft Word](https://en.wikipedia.org/wiki/Microsoft_Word), [Scrivener](https://en.wikipedia.org/wiki/Scrivener_(software))  |

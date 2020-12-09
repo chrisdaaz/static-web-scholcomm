@@ -6,7 +6,7 @@ Websites for scholarly publications and digital scholarship are expected to be s
 
 In academic contexts, static websites have been used for [conference websites](https://2020.code4lib.org/), [digitization projects](https://ocul.on.ca/topomaps/), [archival metadata](http://hillelarnold.com/staticAid/), [academic journals](http://archipelagosjournal.org/), [edited monographs](https://www.getty.edu/publications/mummyportraits/), and [open textbooks](https://moderndive.com/). Unlike conventional web publishing platforms or services, static websites involve much lower hosting and maintenance costs. This helps libraries sustain them over long periods of time. The trade-off, however, is that it takes a bit more technical knowledge to get started. These resources introduce this powerful technology for scholarly communications librarianship. 
 
-### Contents
+## Contents
 
 - A [lesson plan](/teaching-resources/lesson-plan/) containing learning objectives, key concepts, and activities on how static websites relate to scholarly communications librarianship.
 - An [annotated bibliography](/teaching-resources/bibiliography/) of writings and examples for anyone interested in learning about static websites in academic contexts.
