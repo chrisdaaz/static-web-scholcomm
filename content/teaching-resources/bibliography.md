@@ -15,19 +15,19 @@ This annotated bibliography provides an overview of how static websites can be u
 
 Becker, Devin, Evan Williamson, and Olivia Wikle. 2020. “[CollectionBuilder-CONTENTdm: Developing a Static Web ‘Skin’ for CONTENTdm-Based Digital Collections](https://journal.code4lib.org/articles/15326).” _The Code4Lib Journal_, no. 49 (August).
 
-- Becker et al. introduce a workflow and toolset for developing custom static websites for collections in the University of Idaho Library's CONTENTdm digital asset management system. They do this in order to supplement the public-facing features of their collection management system with a friendlier user-interface and "[collections as data](https://collectionsasdata.github.io/)" export features. This article also includes a brilliant overview of their Git/GitHub-based workflow.
+- Becker et al. introduce a workflow and toolset for developing custom static websites for collections in the University of Idaho Library's CONTENTdm digital asset management system. They do this in order to supplement the public-facing features of their collection management system with a friendlier user-interface and "[collections as data](https://collectionsasdata.github.io/)" export features. This article also includes a brilliant overview of their Git/GitHub-based workflow. This real-world example of using static websites to supplement repository systems resembles [the scenario in the "Introduction to Static Site Generators" tutorial](/tutorials/static-site-generators/#scenario-conference-proceedings).
 
 ---
 
 Diaz, Chris. 2018. “[Using Static Site Generators for Scholarly Publications and Open Educational Resources](https://journal.code4lib.org/articles/13861).” _The Code4Lib Journal_, no. 42 (November).
 
-- This article reports on experiences using Jekyll and Bookdown for library publishing projects at Northwestern University. 
+- This article reports on experiences using [Jekyll](https://jekyllrb.com/) and [Bookdown](https://bookdown.org/) for library publishing projects at Northwestern University. The Jekyll site was made for a [conference proceedings](http://crd.northwestern.edu/) publication; the Bookdown site was for an open statistics textbook. 
 
 ---
 
 Gil, Alex, and Kaiama L. Glover. 2016. “[The Sx:Archipelagos Project](https://hcommons.org/deposits/item/hc:11841/),” Humanitites Commons. 
 
-- This paper reports on the planning and execution of a new platform for publishing peer-reviewed scholarship using minimal computing principles. The platform uses technologies that minimize the social/labor costs of scholarly publihsing, namely plain text (Markdown) and static site generators (Jekyll). The result can be seen in [archipelagos: a journal of Caribbean digital praxis](http://archipelagosjournal.org/) and replicated with their [workflow](http://archipelagosjournal.org/workflow.html)
+- This paper reports on the planning and execution of a new platform for publishing peer-reviewed scholarship using minimal computing principles. The platform uses technologies that minimize the social/labor costs of scholarly publihsing, namely plain text (Markdown) and static site generators (Jekyll). The result can be seen in [archipelagos: a journal of Caribbean digital praxis](http://archipelagosjournal.org/) and replicated with their [workflow](http://archipelagosjournal.org/workflow.html).
 
 ---
 
@@ -39,7 +39,7 @@ Gil, Alex. 2015. “[The User, the Learner and the Machines We Make · Minimal C
 
 Lewis, David W., Lori Goetsch, Diane Graves, and Mike Roy. 2018. “[Funding Community Controlled Open Infrastructure for Scholarly Communication: The 2.5% Commitment Initiative](https://doi.org/10.5860/crln.79.3.133)" _College & Research Libraries News_.
 
-- Personally, this call for community action toward sustainable open infrastructure for scholarly commmunication motivated me to think about static web technologies as _microinfrastructures_ for [an open scholarly commons](https://scholarlycommons.net/) that **individual** librarians can leverage toward the common goal. Open scholarly publishing infrastructure is not exclusively the realm of coordinated investments by institutions; it is also activities that individuals can support with fundamental computing resources.  
+- Personally, this call for community action toward sustainable open infrastructure for scholarly commmunication motivated me to think about static web technologies as _microinfrastructures_ for [an open scholarly commons](https://scholarlycommons.net/) that individual librarians can build with little more than personal computers.  
 
 ---
 
@@ -51,7 +51,7 @@ Newson, Kaitlin. 2017. “[Tools and Workflows for Collaborating on Static Websi
 
 Seo, Joo Young, and Sean McCurry. 2019. “[LaTeX Is NOT Easy: Creating Accessible Scientific Documents with R Markdown](http://dspace.calstate.edu/handle/10211.3/210398).” _Journal on Technology and Persons with Disabilities_ 7 (16).
 
-- Seo and McCurry study the accessibility of authoring tools for scientific documents (i.e. documents that require math formulas, embedded graphics, figures, and bibiliographic citations) and introduce the Accessible RMarkdown Online Writer, a web-based authoring tool for blind and low-vision writers of scientific content. They argue that plain text formats make authoring scientific information more accessible to blind and low vision people. However, the predominate plain text format for scientific writing, LaTeX, has a steep learning curve and one output format: PDF. Markdown, on the other hand, is a semantically rich plain text format with a simpler syntax, support for LaTeX math, and wider range of output formats: HTML, PDF, Microsoft Word, RTF, EPUB, PowerPoint, etc.
+- Seo and McCurry study the accessibility of authoring tools for scientific documents (i.e. documents that require math formulas, embedded graphics, figures, and bibiliographic citations) and introduce the [Accessible RMarkdown Online Writer](http://www.arowtool.com/), a web-based authoring tool for blind and low-vision writers of scientific content. They argue that plain text formats make authoring scientific information more accessible to blind and low vision people. However, the predominate plain text format for scientific writing, [LaTeX](https://www.latex-project.org/about/), has a steep learning curve and one output format: PDF. Markdown, on the other hand, is a semantically rich plain text format with a simpler syntax, support for LaTeX math, and wider range of output formats: HTML, PDF, Microsoft Word, RTF, EPUB, PowerPoint, etc.
 
 ---
 

@@ -1,6 +1,8 @@
 #!/bin/bash
 
 sed ':again;$!N;$!b again; s/{{[^}]*}}//g' content/teaching-resources/bibliography.md > bibliography.md
+sed -i "/Download PDF/d" bibliography.md
+sed -i "/Download DOCX/d" bibliography.md
 pandoc bibliography.md --include-after-body=copyright.latex -o static/bibliography.pdf
 pandoc bibliography.md -o static/bibliography.docx
 rm bibliography.md

@@ -4,13 +4,15 @@ title: Resources for Scholarly Communications Librarians
 
 Websites for scholarly publications and digital scholarship are expected to be stable for long-term access, citation, and archiving. Static websites provide a durable and low-cost solution for making and distributing scholarly works. 
 
-In academic contexts, static websites have been used for [conference websites](https://2020.code4lib.org/), [digitization projects](https://ocul.on.ca/topomaps/), [archival metadata](http://hillelarnold.com/staticAid/), [academic journals](http://archipelagosjournal.org/), [edited monographs](https://www.getty.edu/publications/mummyportraits/), and [open textbooks](https://moderndive.com/). Unlike conventional web publishing platforms or services, static websites involve much lower hosting and maintenance costs. This helps libraries sustain them over long periods of time. The trade-off, however, is that it takes a bit more technical knowledge to get started. These resources introduce this powerful technology for scholarly communications librarianship. 
+In library and academic contexts, static websites have been used for [conference websites](https://2020.code4lib.org/), [digitization projects](https://ocul.on.ca/topomaps/), [archival metadata](http://hillelarnold.com/staticAid/), [academic journals](http://archipelagosjournal.org/), [edited monographs](https://www.getty.edu/publications/mummyportraits/), and [open textbooks](https://moderndive.com/). 
+
+These resources introduce this powerful technology for scholarly communications librarianship. 
 
 ## Contents
 
-- A [lesson plan](/teaching-resources/lesson-plan/) containing learning objectives, key concepts, and activities on how static websites relate to scholarly communications librarianship.
-- An [annotated bibliography](/teaching-resources/bibiliography/) of writings and examples for anyone interested in learning about static websites in academic contexts.
-- A [quick demonstration](/tutorials/github/) of GitHub as a web hosting platform 
+- A [lesson plan](/teaching-resources/lesson-plan/) for learning about static web publishing for digital scholarship projects.
+- An [annotated bibliography](/teaching-resources/bibiliography/) of articles, tutorials, and podcasts about static websites in academic contexts.
+- A [quick demonstration](/tutorials/github/) of GitHub as a static website hosting platform 
 - An [introduction to static site generators](/tutorials/static-site-generators/) tutorial
 
 ## Credits
