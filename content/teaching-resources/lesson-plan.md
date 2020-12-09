@@ -5,9 +5,9 @@ weight: 21
 ---
 
 This lesson plan provides an assortment of learning modules for teaching static web technologies for digital scholarship and scholarly communications librarianship. Each topic includes a learning objective and recommended readings, viewings, or tutorials for use in workshops or seminars. 
-
-{{< button href="/lesson-plan.pdf" >}}Download PDF{{< /button >}}
-{{< button href="/lesson-plan.docx" >}}Download DOCX{{< /button >}}
+/stati
+{{< button href="https://chrisdaaz.github.io/static-web-scholcomm/lesson-plan.pdf" >}}Download PDF{{< /button >}}
+{{< button href="https://chrisdaaz.github.io/static-web-scholcomm/lesson-plan.docx" >}}Download DOCX{{< /button >}}
 
 **Topics:**
 
@@ -65,11 +65,11 @@ Newson introduces static site generators for digital library projects with a cas
 
 Most of the websites we use every day are dynamic websites. Dynamic websites store content in databases and use web servers to generate web pages upon each visit. Often, dynamic websites are managed by a content management system (CMS), like [WordPress](https://wordpress.org/), [Drupal](https://www.drupal.com/), or [Omeka](https://omeka.org/). This make them attractive for websites that require permissions-based access, e-commerce, or social interactions. However, dynamic websites need continuing resources for software updates, maintenance, and security.
 
-{{< figure src="http://www.getty.edu/publications/images/digitalpipeline-traditional.gif" title="Traditional (dynamic) website publishing" link="http://www.getty.edu/publications/digital/platforms-tools.html" caption="Content stored in a database is processed by a web server in order to be displayed on the device (Image courtesy of Quire by J. Paul Getty Trust)" >}}
+{{< figure src="http://www.getty.edu/publications/images/digitalpipeline-traditional.gif" title="Traditional (dynamic) website publishing" link="http://www.getty.edu/publications/digital/platforms-tools.html" caption="Content stored in a database is processed by a web server in order to be displayed on the device (Image © 2020 The J. Paul Getty Trust)" >}}
 
 Static websites do not use databases to store content or web servers to dynamically generate web pages; instead, the web pages are pre-built on a personal computer using a static site generator and stored as static HTML files on a public web server, thereby eliminating the need for database security and routine software updates for servers. This makes them cheaper to host and easier to maintain.
 
-{{< figure src="http://www.getty.edu/publications/images/digitalpipeline-static.gif" title="Static-site publishing" link="http://www.getty.edu/publications/digital/platforms-tools.html" caption="Content is generated on a computer and uploaded to web server in order to be displayed as-is on the user's device (Image courtesy of Quire by J. Paul Getty Trust)" >}}
+{{< figure src="http://www.getty.edu/publications/images/digitalpipeline-static.gif" title="Static-site publishing" link="http://www.getty.edu/publications/digital/platforms-tools.html" caption="Content is generated on a computer and uploaded to web server in order to be displayed as-is on the user's device (Image © 2020 The J. Paul Getty Trust)" >}}
 
 Static websites used to make up the majority of the web in the 1990's. People would write HTML code (i.e. "markup") for every page and upload the files to a public web server. Today, people use **static site generators** to automate and simplify the process for making websites. "Think of a static site generator as a script which takes in data, content and templates, processes them, and outputs a folder full of all the resultant pages and assets" ([Hawksworth, 2020](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/)). Compared to dynamic website platforms, static site generators are relatively small pieces of open source software we can run on our computers ourselves.
 

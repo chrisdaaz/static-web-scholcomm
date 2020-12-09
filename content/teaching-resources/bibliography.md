@@ -6,8 +6,8 @@ weight: 22
 
 This annotated bibliography provides an overview of how static websites can be used for scholarly purposes. It includes publications representing a variety of communities, including libraries, digital humanities, and open source software. The citations included in this bibliography --with few exceptions-- focus on librarians and scholars who use static websites for their work. 
 
-{{< button href="/bibliography.pdf" >}}Download PDF{{< /button >}}
-{{< button href="/bibliography.docx" >}}Download DOCX{{< /button >}}
+{{< button href="https://chrisdaaz.github.io/static-web-scholcomm/bibliography.pdf" >}}Download PDF{{< /button >}}
+{{< button href="https://chrisdaaz.github.io/static-web-scholcomm/bibliography.docx" >}}Download DOCX{{< /button >}}
 
 {{< toc >}}
 
