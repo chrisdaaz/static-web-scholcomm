@@ -5,7 +5,7 @@ weight: 21
 ---
 
 This lesson plan provides an assortment of learning modules for teaching static web technologies for digital scholarship and scholarly communications librarianship. Each topic includes a learning objective and recommended readings, viewings, or tutorials for use in workshops or seminars. 
-/stati
+
 {{< button href="https://chrisdaaz.github.io/static-web-scholcomm/lesson-plan.pdf" >}}Download PDF{{< /button >}}
 {{< button href="https://chrisdaaz.github.io/static-web-scholcomm/lesson-plan.docx" >}}Download DOCX{{< /button >}}
 
