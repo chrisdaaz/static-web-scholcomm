@@ -65,7 +65,7 @@ Varner, Stewart. 2017. “[Minimal Computing in Libraries: Introduction · Minim
 
 “[Fundamentals: YAML & Markdown](https://gettypubs.github.io/quire/guide/fundamentals/).” 2020. In _Quire: Multiformat Book Publishing_. J. Paul Getty Trust, Los Angeles. 
 
-- This is a chapter from the manual for Quire, a multiformat book publishing program, but it is an excellent introduction to the fundamentals of Markdown and YAML in the context of a static site generator for book publishing. The concepts covered in the chapter are essential to using any static site generator. There's also some important guiance on converting documents from Microsoft Word to plain text.  
+- This is a chapter from the manual for [Quire](https://gettypubs.github.io/quire/), a multiformat book publishing framework, but it is an excellent introduction to the fundamentals of Markdown and YAML in the context of a static site generator for book publishing. The concepts covered in the chapter are essential to using any static site generator. There's also some important guiance on converting documents from Microsoft Word to plain text.  
 
 ---
 
@@ -83,7 +83,7 @@ Tenen, Dennis, and Grant Wythoff. 2014. “[Sustainable Authorship in Plain Text
 
 P2PU. 2020. “[Course-in-a-Box: An open-source project for creating online courses](https://course-in-a-box.p2pu.org).” 
 
-- Course-in-a-Box is a tutorial and instructional guide for creating free course websites on GitHub. The tutorial teaches you to use Markdown and YAMl in the GitHub web interface to create and publishing a static website. No installation of software is required, but everything covered in the instructions is applicable for using static site generators (specifically Jekyll). 
+- Course-in-a-Box is a tutorial and instructional guide for creating free course websites on GitHub. The tutorial teaches you to use Markdown and YAMl in the GitHub web interface to create and publishing a static website. No installation of software is required, but everything covered in the instructions is applicable for using static site generators (specifically [Jekyll](https://jekyllrb.com/)). 
 
 Visconti, Amanda. 2016. “[Building a Static Website with Jekyll and GitHub Pages](https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github-pages).” _Programming Historian_. 
 

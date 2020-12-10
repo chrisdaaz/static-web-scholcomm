@@ -732,6 +732,21 @@ By storing your source code in a GitHub-hosted repository, you can deploy static
 
 The Hugo Documentation includes a lot of [hosting and deployment recommendations](https://gohugo.io/hosting-and-deployment/). Many of these options have free tiers, but static website hosting usually only costs a few dollars per month. 
 
+### Netlify
+
+[Netlify](https://www.netlify.com/) is a web hosting company specializing in static websites. They provide free individual accounts, integration with [GitHub](), and numerous 1-click deployment options with popular static site generators. This is a typical workflow with Netlify:
+
+- Set up a web project with static site generator on a personal computer
+- Initialize a [Git](https://git-scm.com/) repository on the project
+- Push a copy of the repository to [GitHub](https://github.com)
+- Grant Netlify access to GitHub repositories
+- Netlify copies the web project to their servers, build the website, and host the website
+- Updates to web project get pushed to GitHub copy and automatically trigger new website deploys 
+
+Automating this workflow can take some time up front, it saves a lot of time over the course of updating the website. Netlify also provides [Netlify Drop](https://app.netlify.com/drop), which is an option to upload the pre-built website folder directlly (no Git/ GitHub integration necessary).
+
+For deploying the conference proceedings website, run the `hugo` command and upload the `/public/` folder to Netlify Drop to make the website available to the public.
+
 ## Tips for Archiving Static Websites
 
 Static websites themselves are not digital repository or preservation systems. They do, however, provide a few options for creating [OAIS Submission Information Packages (SIPs)](https://en.wikipedia.org/wiki/Open_Archival_Information_System#The_OAIS_environment_and_information_model). In fact, it's possible that static websites are easier to archive than database-driven websites, as Rumianek ([2013](http://www.dlib.org/dlib/january13/rumianek/01rumianek.html)) writes:
@@ -745,4 +760,3 @@ Web archiving tools like [Archive-it](https://archive-it.org/) can be set to cra
 - **Archiving the public website:** Run the `hugo` command on your completed website, create a `.zip` file of the `/public/` folder, and add it to a digital repository or digital preservation system.
   
 - **Archiving the source material:** Create a `.zip` file of the entire static site project folder, including the content, layouts, and assets files, and add it to a digital repository or digital preservation system. 
-
