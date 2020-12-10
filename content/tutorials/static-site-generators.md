@@ -46,10 +46,10 @@ Although we will be using [Hugo](https://gohugo.io/) to build our website, our g
 
 There are two main types of documents we use to write and edit text: [plain-text](https://en.wikipedia.org/wiki/Plain_text) and [rich text](https://en.wikipedia.org/wiki/Formatted_text). Plain text exposes the raw, semantic characters within a document, whereas rich text displays the formatting features and styles. 
 
-|            | File Formats            | Editors                    |
-| ---------- | ----------------------- | -------------------------- |
-| Plain text | `.xml`, `.html`, `.md`  | Notepad, TextEdit, VS Code |
-| Rich text  | `.docx`, `.rtf`, `.odt` | Microsoft Word, Scrivener  |
+| File Contents | File Extension          | Editors                    |
+| ------------- | ----------------------- | -------------------------- |
+|   Plain text  | `.xml`, `.html`, `.md`  | Notepad, TextEdit, VS Code |
+|   Rich text   | `.docx`, `.rtf`, `.odt` | Microsoft Word, Scrivener  |
 
 Most of us are trained to use rich text editors: emails, word documents, content management systems. This is for good reason: they're easy to use and we need them for everyday things. For scholarly communications purposes, plain text offers some advantages over rich text, as Tenen and Wythoff ([2014](https://doi.org/10.46430/phen0041)) explain: 
 
