@@ -280,8 +280,16 @@ You will need administrator priviledges on your machine to install and configure
 - Open [Windows Explorer](https://www.wikihow.com/Open-Windows-Explorer)
 - Create a new folder at the root of your `C` Drive and call it `Hugo`: `C:\Hugo`
 - Create a subfolder in the `Hugo` folder called `bin`: `C:\Hugo\bin`
+
+![Make Hugo bin Folder](/static-web-scholcomm/hugo-bin.png)
+
 - Download the latest `.zip` file for the Windows operating system from the [Hugo Releases](https://github.com/gohugoio/hugo/releases) page. It will be a file that looks something like: `hugo_x.xx.x_Windows-xxbit.zip`. Here's how to [check if your running a 32-bit or 64-bit](https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808) version of Windows.
+
+![Download Hugo ZIP file](/static-web-scholcomm/hugo-zip.png)
+
 - Extract all of the contents of the `.zip` folder to the `C:\Hugo\bin` folder you already created.
+
+![Extract Hugo files to bin Folder](/static-web-scholcomm/hugo-extracts.png)
 
 #### Making `hugo` available as a command in your terminal
 
