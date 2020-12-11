@@ -3,7 +3,7 @@ title: "GitHub for Static Web Publishing"
 weight: 11
 ---
 
-This tutorial introduces [GitHub](https://github.com/) as a free static website publishing platform. No installation of any software is required, however, you will need a GitHub account. By the end of this tutorial, you will have your own version of an open textbook [template](https://bookdown.org/yihui/bookdown-demo/) available to your further editing. **This tutotial is estimated to take between 30 and 60 minutes to complete.**
+This tutorial introduces [GitHub](https://github.com/) as a free static website publishing platform. No installation of additional software is required, however, you will need a GitHub account. By the end of this tutorial, you will have your own version of an open textbook [template](https://bookdown.org/yihui/bookdown-demo/) available for further editing. **This tutotial is estimated to take between 30 and 60 minutes to complete.**
 
 **Prerequisities**
 
@@ -29,6 +29,13 @@ First, log in to your [GitHub](https://github.com) account. We will copy and ada
 
 The `minibookdown` repository contains the code we will need to begin creating your own open textbook. You should now have a repository under your account at a web address that looks like this: `https://github.com/YOUR_USERNAME/minibookdown`
 
+## Configure Textbook 
+
+The textbook template comes with a workflow file that generates the output files for the book (i.e. the HTML, PDF, and EPUB versions). We'll need to enable the workflow file in GitHub:
+
+- Click on the `Actions` tab
+- Click on the `I understand my workflows, go ahead and enable them` button
+
 ## Customize Your Open Textbook
 
 The `minibookdown` repository we forked to your GitHub account contains the bare minimum of a [Bookdown](https://bookdown.org) project. Bookdown is a popular open source tool for writing and publishing technical and scientific books from [R Markdown](https://rmarkdown.rstudio.com/) files. We don't need to know anything about the R programming language or statical computing to use Bookdown for formating and publishing open textbooks. Bookdown will generate PDF, HTML, EPUB, and Word document versions of our open textbook for us.
@@ -39,10 +46,13 @@ GitHub, in addition to being a host for source code files, is also a basic file 
 - To edit the file, click on the pencil icon near the right side of the page
 - Edit these lines with the working title and author of your textbook (make sure that the title and authors are in double quotations):
 
-```
+```yaml
 title: "A Mini Bookdown"
 author: "Your Name"
 ```
+- Once you're ready to save your changes, scroll down to the `Commit changes` button. This is also an opportunity to explain the reasoning behing the change. By default, GitHub fills the web form with `Update FILENAME` but you can change it to something more descriptive, like `Adds book metadata`. 
+- Make sure that the `Commit directly to the main branch` is selected and click on the `Commit changes` button
+
 To add chapters, you can create more `.Rmd` files to your repository:
 
 - From the main page of your repository (`https://github.com/YOUR_USERNAME/minibookdown`), click on the "Add file" button and select "Create new file"
@@ -54,25 +64,15 @@ You can [follow in the instructions in the Bookdown manual](https://bookdown.org
 
 ## Publish Your Open Textbook
 
-There are a few more updates that you need to make to your repository to make your textbooks publicly available. First, you'll need to create an `ACCESS_TOKEN` to give Github permission to build your textbook. This token grants GitHub programmatic access to the contents of your open textbook repository. Specifically, this will enable GitHub to automatically run the Bookdown software to update the HTML, PDF, EPUB, and Word document output versions of the textbook whenever you update the repository's source code.
+By enabling workflow files in our repository, we've effectively programmed GitHub to build the HTML, PDF, and EPUB files for our textbook each time we update a file in our project directory. This setting is controlled by the `.github/workflows/main.yml` file on our repository. 
 
-- Open a new tab and [create a new personal access token](https://github.com/settings/tokens/new). 
-- Confirm your password to access to the settings menu
-- Enter a name for the access token in the "Note" field of the form: `minibookdown`
-- Click on the box next to `repo` to give this token "Full control of private repositories" 
-- Scroll down and click on `Generate token`
-- The personal access token is a string of alphanumeric characters. Copy this string to your clipboard (or somewhere secure for easy reference) and keep this tab open. 
+Each time we commit a change to one of the files, the book will re-build. This particular book takes a few minutes for changes to be made because GitHub spins up a new server, downloads our files, installs [R](https://www.r-project.org/about.html), [Pandoc](https://pandoc.org/), and [LaTeX](https://yihui.org/tinytex/), runs scripts to build the output files, then moves the output files to a new branch called `gh-pages`. The `gh-pages` branch serves as a pseudo-server; is where the HTML, epub, and PDF files for our textbook are stored for public online access. This is through the [GitHub Pages](https://pages.github.com/) hosting service for static websites.
 
-Now, we will need to add this token to your textbooks repository's secrets. While code in Github repositories are public, personal access tokens are things you should never make public. GitHub allows you to store secrets in your Github repository, like access tokens, that only you can see. Let's add your personal access token to your repository's secrets:
+Before we can view the web version of our textbook, we have to turn on the GitHub Pages feature.
 
-- In a new tab, go to your `minibookdown` repository. 
-- Click on the `Settings` tab
-- Cick on the `Secrets` option in the sidebar
-- We can create secrets by clicking on the the `New repository secret` button
+- Click on the `Settings` tab 
+- Scroll down to the `GitHub Pages` heading
+- In the `Source` section, click on the drop-down menu and change `None` to `gh-pages` +  `/(root}`
+- Click the `Save` button
 
-We're actually going to create two secrets. Each secret needs a **name** and a **value**: 
-
-- Name the first secret `ACCESS_TOKEN` and paste your personal access token into the value field. Click Add secret.
-- Name the second secret `EMAIL` and type in your email address. We'll need this to give you status updates about your textbook (more on this later). Click Add secret.
-
-We have now set up GitHub convert your textbook markdown files into a website. Each time you update any `.Rmd` file in your repository, GitHub will build and publish your open textbook to a public web address. You can view it by going to [https://your-github-username.github.io/minibookdown/](https://your-github-username.github.io/minibookdown/).
+You now have a publicly available open textbook on GitHub. You can view it by going to [https://your-github-username.github.io/minibookdown/](https://your-github-username.github.io/minibookdown/).
