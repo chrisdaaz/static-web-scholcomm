@@ -273,7 +273,7 @@ This will open your terminal to your `User`'s home directory. Here are three imp
 
 {{< tab "Windows" >}}
 
-Here's a helpful [video on installing Hugo on Windows](https://www.youtube.com/watch?v=G7umPCU-8xc).
+You will need administrator priviledges on your machine to install and configure Hugo. Here's a helpful [video on installing Hugo on Windows](https://www.youtube.com/watch?v=G7umPCU-8xc).
 
 #### Setting Up Required Software Files and Folders
 
@@ -282,17 +282,16 @@ Here's a helpful [video on installing Hugo on Windows](https://www.youtube.com/w
 - Create a subfolder in the `Hugo` folder called `bin`: `C:\Hugo\bin`
 - Download the latest `.zip` file for the Windows operating system from the [Hugo Releases](https://github.com/gohugoio/hugo/releases) page. It will be a file that looks something like: `hugo_x.xx.x_Windows-xxbit.zip`. Here's how to [check if your running a 32-bit or 64-bit](https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808) version of Windows.
 - Extract all of the contents of the `.zip` folder to the `C:\Hugo\bin` folder you already created.
-- Rename the `.exe` file to `hugo.exe` in the `C:\Hugo\bin` folder.
 
 #### Making `hugo` available as a command in your terminal
 
 - Click on the `Start` button.
 - Type `Environment Variables` and select the search result for `Edit the system Environment Variables` from the Control panel
 - Click on the `Environment Variables` button
-- In the `User` variables section, find the row that starts with PATH (PATH will be all caps).
+- In the `System` variables section, find the row that starts with PATH (PATH will be all caps).
 - Double-click on `PATH`.
 - Click the `New` button.
-- Type in the folder path in which the `hugo.exe` was saved: `C:\Hugo\bin`. The `PATH` entry should be the _folder_ where Hugo lives. Press Enter when you’re done typing.
+- Type in the folder path in which the `hugo.exe` was saved: `C:\Hugo\bin`. The `PATH` entry should be the _folder_ where Hugo lives. Press `OK` when you’re done typing.
 - Click `OK` at every window to exit.
 
 #### Verify the installation
