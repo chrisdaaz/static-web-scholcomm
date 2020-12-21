@@ -10,7 +10,7 @@ This tutorial introduces [GitHub](https://github.com/) as a free static website 
 - A free [GitHub](https://github.com/) account
 - Familarity with [basic Markdown](https://bookdown.org/yihui/bookdown/markdown-syntax.html) and [YAML](https://bookdown.org/yihui/bookdown/r-markdown.html#r-markdown) syntax
 
-**Topics Covered**
+**Outline**
 
 {{< toc >}}
 
@@ -24,9 +24,11 @@ Rather than starting from scratch, we are going to reuse an existing project for
 
 First, log in to your [GitHub](https://github.com) account. We will copy and adapt an existing git repository on GitHub in order to make our open textbook. To do this, we will need to "fork" an existing repository. When you create a fork on GitHub, you create a copy of someone elses git repository _on your GitHub account_ in order create your own version of the project.
 
-- Visit this repository: https://github.com/chrisdaaz/minibookdown
+1. Visit this repository: https://github.com/chrisdaaz/minibookdown
+2. Click on the `Code` tab in the repository view
+3. Click on the `Fork` button near the top of the page
 
-{{< figure src="/static-web-scholcomm/fork.png" title="Fork the Repository" caption="Click on the `Fork` button near the top of the page" >}}
+{{< figure src="/static-web-scholcomm/fork.png" title="Fork the Repository" >}}
 
 The `minibookdown` repository contains the code we will need to begin creating your own open textbook. You should now have a repository under your account at a web address that looks like this: `https://github.com/YOUR_USERNAME/minibookdown`
 
@@ -48,22 +50,22 @@ GitHub, in addition to being a host for source code files, is also a basic file 
 
 {{< figure src="/static-web-scholcomm/edit.png" title="Edit the index.Rmd file" caption="To edit the file, click on the pencil icon near the right side of the page" >}}
 
-- Edit these lines with the working title and author of your textbook (make sure that the title and authors are in double quotations):
+1. Edit these lines with the working title and author of your textbook (make sure that the title and authors are in double quotations):
 
 ```yaml
 title: "A Mini Bookdown"
 author: "Your Name"
 ```
-- Once you're ready to save your changes, scroll down to the `Commit changes` button. This is also an opportunity to explain the reasoning behing the change. By default, GitHub fills the web form with `Update FILENAME` but you can change it to something more descriptive, like `Adds book metadata`. 
-- Make sure that the `Commit directly to the main branch` is selected and click on the `Commit changes` button
+2. Once you're ready to save your changes, scroll down to the `Commit changes` button. This is also an opportunity to explain the reasoning behing the change. By default, GitHub fills the web form with `Update FILENAME` but you can change it to something more descriptive, like `Adds book metadata`. 
+3. Make sure that the `Commit directly to the main branch` is selected and click on the `Commit changes` button
 
 To add chapters, you can create more `.Rmd` files to your repository:
 
 {{< figure src="/static-web-scholcomm/add.png" title="Add new file" caption="From the main page of your repository (`https://github.com/YOUR_USERNAME/minibookdown`), click on the `Add file` button and select `Create new file`" >}}
 
-- Set the file name. The name needs to begin with two numbers to represent the chapter number, followed by a hyphen (`-`), the chapter title, and the R Markdown file extention (`.Rmd`). For example: `01-introduction.Rmd`
-- The first line of the file should start with a hash symbol `#` to represent the chapter title.
-- The contents of the chapter can be written using [Markdown](https://www.markdownguide.org/) or [R Markdown](https://rmarkdown.rstudio.com/index.html) plain text syntax. 
+4. Set the file name. The name needs to begin with two numbers to represent the chapter number, followed by a hyphen (`-`), the chapter title, and the R Markdown file extention (`.Rmd`). For example: `01-introduction.Rmd`
+5. The first line of the file should start with a hash symbol `#` to represent the title of the chapter. Enter any title following a hash symbol (for example: `# Introduction`).
+6. The contents of the chapter can be written using [Markdown](https://www.markdownguide.org/basic-syntax/) syntax. 
 
 You can [follow in the instructions in the Bookdown manual](https://bookdown.org/yihui/bookdown/usage.html) to continue adding and editing the contents of your open textbook.
 
@@ -79,8 +81,8 @@ Before we can view the web version of our textbook, we have to turn on the GitHu
 
 {{< figure src="/static-web-scholcomm/settings.png" title="Enable GitHub Pages in Repository Settings" caption="Click on the `Settings` tab" >}}
 
-- Scroll down to the `GitHub Pages` heading
-- In the `Source` section, click on the drop-down menu and change `None` to `gh-pages` +  `/(root}`
-- Click the `Save` button
+1. Scroll down to the `GitHub Pages` heading
+2. In the `Source` section, click on the drop-down menu and change `None` to `gh-pages` +  `/(root}`
+3. Click the `Save` button
 
 You now have a publicly available open textbook on GitHub. You can view it by going to [https://your-github-username.github.io/minibookdown/](https://your-github-username.github.io/minibookdown/).
