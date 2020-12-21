@@ -1,13 +1,14 @@
 ---
 title: "Introduction to Static Site Generators"
 weight: 12
+geekdocToC: 4
 ---
 
-This tutorial will teach you the basics of using a static site generator. We will be using [Hugo](https://gohugo.io/) to build our demonstration site. We'll play the role of a scholarly communications librarian. We'll be using a command line terminal to install software and run commands and a text editor to edit and save plain text files. **This in-depth tutotial is estimated to take between one and two hours to complete.**
+This tutorial will teach you the basics of using a static site generator. We will be using [Hugo](https://gohugo.io/) to build our demonstration site. We'll play the role of a scholarly communications librarian. We'll be using a command line terminal to install software and run commands and a text editor to edit and save plain text files. **This in-depth tutotial is estimated to take between three and four hours to complete.**
 
 While we will be using [Hugo](https://gohugo.io/) as our static site generator, this tutorial is not intended to be a cover the depth and breadth of Hugo. For that, I refer you to the Hugo [documentation](https://gohugo.io/documentation/) and [community](https://discourse.gohugo.io/). Rather, this tutorial is about using static site generators in a library-publishing context. 
 
-**Topics Covered:**
+**Outline:**
 
 {{< toc >}}
 
@@ -17,7 +18,7 @@ There's an academic department that is hosting a conference on campus. You appro
 
 ### Local IT Constraints
 
-Institutional repositories can be useful systems for storing and providing long-term public access to documents. They provide obvious benefits to libraries, but faculty and students might struggle to see those benefits. Unfortunately, the complexity of repository systems make them difficult or prohibitively costly to customize for specific collections or content types. It's also generally not a good idea to customize repository systems for edge cases.
+[Institutional repositories](https://en.wikipedia.org/wiki/Institutional_repository) can be useful systems for storing and providing long-term public access to documents. They provide obvious benefits to libraries, but faculty and students might struggle to see those benefits. Unfortunately, the complexity of repository systems make them difficult or prohibitively costly to customize for specific collections or content types. It's also generally not a good idea to customize repository systems for edge cases.
 
 Creating a separate website with platforms like WordPress or Drupal can be costly in terms of maintainance (and eventual content migration). We want to avoid unscheduled downtime and urgent security patches. In addition to requiring someone to manage the website contents, someone else (usually an IT administrator or vendor) needs to set up a server with application software and a database. Overtime, the server will need -- at a minimum -- software patches to secure the database and user credentials. You can't afford to pay a vendor for hosted solution and you can't get the commitments from IT managers to help you spin up and maintain a new web service. 
 
@@ -32,7 +33,7 @@ Static websites can provide custom presentation features for collections stored 
 
 **Recommended Reading:** Becker, Devin, Evan Williamson, and Olivia Wikle. 2020. “[CollectionBuilder-CONTENTdm: Developing a Static Web ‘Skin’ for CONTENTdm-Based Digital Collections](https://journal.code4lib.org/articles/15326).” The Code4Lib Journal, no. 49 (August).
 
-- While this tutorial focuses on static websites as supplements to institutional repositories, the University of Idaho uses static websites as collection-level presentation layers for their CONTENTdm digital collections system. 
+- This article discusses the University of Idaho Library's use of static websites as collection-level presentation layers for their CONTENTdm digital collections system.
 
 {{< /hint >}}
 
@@ -59,13 +60,13 @@ Coming to a plain text editor from a word processing program (like Microsoft Wor
 
 ### Plain Text and Static Site Generators
 
-Static site generators use plain text in order to separate content from styles. Static site generators use [Markdown](https://en.wikipedia.org/wiki/Markdown) as the plain text markup language for content, such as headings, paragraphs, links, lists, and references, and [YAML](https://en.wikipedia.org/wiki/YAML) for metadata, such as title, author, abstract, date. 
+Static site generators use plain text in order to separate content from styles. Static site generators use [Markdown](https://en.wikipedia.org/wiki/Markdown) as the plain text markup language to express semantic formatting, such as headings, paragraphs, links, lists, and references, and [YAML](https://en.wikipedia.org/wiki/YAML) for metadata, such as title, author, abstract, date. 
 
 #### Content
 
 Markdown uses a syntax that prioritizes human readability without sacrificing semantic structure. There are numerous tools available that will convert markdown to other formats, such as `.html`, `.docx`, `.pdf`, `.tex`, `.epub`, `.jats`, `.tei`, etc. The most popular markdown conversion tool is [Pandoc](https://pandoc.org/). 
 
-Static site generators all have markdown processors to generate `.html`. Below is a comparison between the markdown input and the HTML output that static site generators make. Click the “HTML Output” button in each example to see the HTML output.
+Static site generators all have markdown processors to generate `.html`. Below is a comparison between the markdown input and the HTML output that static site generators make. Click “HTML Output” in each example to see the HTML output.
 
 **Markdown input: Headings**
 
@@ -277,38 +278,37 @@ You will need administrator priviledges on your machine to install and configure
 
 #### Setting Up Required Software Files and Folders
 
-- Open [Windows Explorer](https://www.wikihow.com/Open-Windows-Explorer)
-- Create a new folder at the root of your `C` Drive and call it `Hugo`: `C:\Hugo`
-- Create a subfolder in the `Hugo` folder called `bin`: `C:\Hugo\bin`
+1. Open [Windows Explorer](https://www.wikihow.com/Open-Windows-Explorer)
+2. Create a new folder at the root of your `C` Drive and call it `Hugo`: `C:\Hugo`
+3. Create a subfolder in the `Hugo` folder called `bin`: `C:\Hugo\bin`
 
 ![Make Hugo bin Folder](/static-web-scholcomm/hugo-bin.png)
 
-- Download the latest `.zip` file for the Windows operating system from the [Hugo Releases](https://github.com/gohugoio/hugo/releases) page. It will be a file that looks something like: `hugo_x.xx.x_Windows-xxbit.zip`. Here's how to [check if your running a 32-bit or 64-bit](https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808) version of Windows.
+4. Download the latest `.zip` file for the Windows operating system from the [Hugo Releases](https://github.com/gohugoio/hugo/releases) page. It will be a file that looks something like: `hugo_x.xx.x_Windows-xxbit.zip`. Here's how to [check if your running a 32-bit or 64-bit](https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808) version of Windows.
 
 ![Download Hugo ZIP file](/static-web-scholcomm/hugo-zip.png)
 
-- Extract all of the contents of the `.zip` folder to the `C:\Hugo\bin` folder you already created.
+5. Extract all of the contents of the `.zip` folder to the `C:\Hugo\bin` folder you already created.
 
 ![Extract Hugo files to bin Folder](/static-web-scholcomm/hugo-extracts.png)
 
 #### Making `hugo` available as a command in your terminal
 
-- Click on the `Start` button.
-- Type `Environment Variables` and select the search result for `Edit the system Environment Variables` from the Control panel
-- Click on the `Environment Variables` button
-- In the `System` variables section, find the row that starts with PATH (PATH will be all caps).
-- Double-click on `PATH`.
-- Click the `New` button.
-- Type in the folder path in which the `hugo.exe` was saved: `C:\Hugo\bin`. The `PATH` entry should be the _folder_ where Hugo lives. Press `OK` when you’re done typing.
-- Click `OK` at every window to exit.
+7. Click on the `Start` button.
+8. Type `Environment Variables` and select the search result for `Edit the system Environment Variables` from the Control panel
+9. Click on the `Environment Variables` button
+10. In the `System` variables section, find the row that starts with PATH (PATH will be all caps).
+11. Double-click on `PATH`.
+12. Click the `New` button.
+13. Type in the folder path in which the `hugo.exe` was saved: `C:\Hugo\bin`. The `PATH` entry should be the _folder_ where Hugo lives. Press `OK` when you’re done typing.
+14. Click `OK` at every window to exit.
 
 #### Verify the installation
 
-- Open the `Command Prompt`
-- Type in  `hugo version` and press `Enter`
+15. Open the `Command Prompt`
+16. Type in  `hugo version` and press `Enter`
     - If the installation is successful, the output will display the version of Hugo you've installed.
     - If this doen't happen, then verify that the folder location of the `hugo.exe` file has been added to your `PATH` Environmental Variables in your Advanced System Settings (see: above).
-
 
 {{< /tab >}}
 
@@ -390,7 +390,7 @@ The files and folders we use to _build_ the website are diffent than the files a
 
 Here's a comparison between the files and folders for a basic hugo project, before and after transformation (the default _output_ directory in a Hugo project is called `public`):
 
-{{< expand "Working Directory: Hugo Project Files" >}}
+{{< expand "Click to expand: Working Directory Containing Hugo Project Files" >}}
 
 ```
 conference-proceedings/
@@ -454,7 +454,7 @@ conference-proceedings/
 
 We use the working directory to store and edit our project files. Once we're finished, we run the `hugo` command from our terminal.
 
-{{< expand "Output Directory: Website Files" >}}
+{{< expand "Click to expand: Output Directory Containing Final Website Files" >}}
 
 ```
 public/
@@ -524,22 +524,28 @@ This creates a new directory called `public` containing our website files. These
 
 ## Working with a Static Site Generator: Hugo
 
+### Build and Preview Your Website
+
+{{< hint info >}}
+
 **Task:** Download the [exercise files](https://github.com/chrisdaaz/static-web-scholcomm-exercise-files) from GitHub. You can download the [zip file](https://github.com/chrisdaaz/static-web-scholcomm-exercise-files/archive/main.zip) and extract them to a directory you can easily access on your machine, such as your "Documents" folder.
 
-The exercise files contain the working directory for a Hugo project. After following these steps, you should be able to build and preview a functional website on your computer  with Hugo. 
+{{< /hint >}}
 
-- Open the Folder in VS Code
-- Open a Terminal in VS Code: Title menu > `Terminal` > `New Terminal`
-- Start the Hugo server to preview the website: `hugo server`
-- Open a web browser and visit: `http://localhost:1313`
+The exercise files contain the working directory for a Hugo project. The Hugo software not only provides a process for building websites, it also provides a local web server we can use to preview our websites before we build the final versions. After following these steps, you should be able to build and preview a functional website on your computer  with Hugo. 
 
-This will ensure that Hugo is installed on your computer and the files are rendering properly on your machine. While you work with static site generators, it's always nice to have the option to preview your updates locally before pushing changes to a server. With the Hugo server running, any changes to working directory files with automatically trigger a rebuild of the site for you to preview in a web browser.
+1. Open the Folder for the exercise files in VS Code: `File > Open folder...`; you should see the contents of the `static-web-scholcomm-exercise-files` folder in the left sidebar of VS Code
+2. Open a Terminal in VS Code: Title menu > `Terminal` > `New Terminal`
+3. Start the Hugo server to preview the website by entering this command into the terminal: `hugo server`
+4. Open a web browser and visit: `http://localhost:1313`
 
-If you got an error running the `hugo server` command, there might have been a problem installing Hugo and adding the `hugo.exe` file to your `PATH` variable. Re-try the installation steps. If that doesn't work, search the web for error messages to troubleshoot the issue. There's always a good chance someone else has run into the same problem!
+You should now see a website template for the conference proceedings we're going to make. If you see a website, this means that Hugo is installed on your computer and the files are rendering properly on your machine. While you work with static site generators, it's always nice to have the option to preview your updates locally before pushing changes to a server. With the Hugo server running, any changes to working directory files with automatically trigger a rebuild of the site for you to preview in a web browser.
+
+> If you got an error running the `hugo server` command, there might have been a problem installing Hugo and adding the `hugo.exe` file to your `PATH` variable. Re-try the installation steps. If that doesn't work, search the web for error messages to troubleshoot the issue. There's always a good chance someone else has run into the same problem!
 
 The exercise files contain the starter files for a basic Hugo project. The folders are organized in a way that separates content from layouts and styles. 
 
-Most people who use static site generators create and edit the Markdown files in the content folder (`/content/`) and the settings in the configuration file (`config.yml`). The other folders in the working directory are used for more advanced features and customizations. For example, the layouts and styles are usually set by a theme. Themes are usually developed for a specific use case (e.g. blog, portfolios, documentation, e-commerce) with features (e.g. search, image galleries, [CSS framework](https://github.com/troxler/awesome-css-frameworks) support).
+Most people who use static site generators create and edit the Markdown files in the content folder (`/content/`) and edit the settings in the configuration file (`config.yml`). The Markdown files in the `/content/` folder contain all of the text of the website, whereas the configurations in the `config.yml` contain site-wide settings, such as the website title.Each theme you use will have it's own configutation settings in the `config.yml` file (good themes document what each setting is for!). The other folders in the working directory are used for more advanced features and customizations. For example, the layouts and styles are usually set by a theme. Themes are usually developed for a specific use case (e.g. blog, portfolios, documentation, e-commerce) with features (e.g. search, image galleries, [CSS framework](https://github.com/troxler/awesome-css-frameworks) support).
 
 The most popular static site generators have numerous themes available for people to use and customize in their websites. The Hugo community has published [a lot of themes](https://themes.gohugo.io/) for anyone to use with their websites. In this tutorial, we'll be using a simplified version of the [Hugo Bulma](https://github.com/jeblister/bulma) theme and the [Bulma](https://bulma.io/) CSS framework. 
 
@@ -547,7 +553,11 @@ The most popular static site generators have numerous themes available for peopl
 
 The first file we'll edit is the configuration file: `config.yml`. Hugo allows you to write your configuration files in YAML, JSON, or TOML. Each of these languages have slightly different syntaxes, but they both perform the same functions: storing site-wide settings. 
 
+{{< hint info >}}
+
 **Task:** Open the `config.yml` in a text editor, change the `title`, `description`, `institution`, and `publisher` for the conference to the following values:
+
+{{< /hint >}}
 
 | Attribute     | Value                                                                        |
 | ------------- | ---------------------------------------------------------------------------- |
@@ -558,20 +568,24 @@ The first file we'll edit is the configuration file: `config.yml`. Hugo allows y
 
 When you're done, save the file (`Ctrl S`). You can check out the changes in a web browser. If your local server is still running and the browser is already open to `http://localhost:1313`, the changes should already be there. If not:
 
-- Open a Terminal in VS Code: Title menu > `Terminal` > `New Terminal`
-- Start the Hugo server to preview the website: `hugo server`
-- Open a web browser and visit: `http://localhost:1313`
+1. Open a Terminal in VS Code: Title menu > `Terminal` > `New Terminal`
+2. Start the Hugo server to preview the website: `hugo server`
+3. Open a web browser and visit: `http://localhost:1313`
 
 For more information, see: [Hugo Documentation: Configuration](https://gohugo.io/getting-started/configuration/)
 
 ### Contents
 
-**Task:** Create the Data Visualizations section of the website. 
+{{< hint info >}}
 
-- Find two (or more) public domain or [Creative Commons](https://creativecommons.org) licensed images of data visualizations in [Wikimedia Commons](https://commons.wikimedia.org/). With the Advanced Search, you can fiter by file type to return only images. Keep them open as tabs in your browser.
-- Create a folder called `visualizations` as a subfolder of `/content/`
-- Create one Markdown file (`.md`) for each visualization you plan to include
-- Copy and paste this YAML metadata block at the top of each Markdown file:
+**Task:** Create the Data Visualizations section of the website by adding a new section to the website. 
+
+{{< /hint >}}
+
+1. Find two (or more) public domain or [Creative Commons](https://creativecommons.org) licensed images of data visualizations in [Wikimedia Commons](https://commons.wikimedia.org/). With the Advanced Search, you can fiter by file type to return only images. Keep them open as tabs in your browser.
+2. Create a folder called `visualizations` as a subfolder of `/content/`
+3. Create one Markdown file (`.md`) for each visualization you plan to include and add the file to the `visualizations` subfolder
+4. Copy and paste this YAML metadata block at the top of each Markdown file:
 
 ```
 ---
@@ -587,32 +601,32 @@ license:
 ---
 ```
 
-- Add in values for each of the metadata fields within the YAML metadata block. See below for instructions on how to format the values for each field.
+5. Add in values for each of the metadata fields within the YAML metadata block. See below for instructions on how to format the values for each field.
 
 Here's a mapping of Wikimedia image metadata and metadata we're using on the site:
 
 | Wikimedia  | Website                                                                                                                                                 |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`    | File name                                                                                                                                               |
-| `authors`  | Creator. Make sure that all creators are listed within brackets and quotations, separated by commas if there are more than one. For example, a single creator would look like `["first_name last_name"]` whereas multiple creators would look like `["first_name last_name", "first_name last_name", "first_name last_name"]` |
+| `authors`  | Creator. Make sure that all creators are listed within brackets and quotations, separated by commas if there are more than one. For example, a single creator would look like `["first_name last_name"]` whereas multiple creators would look like `["first_name last_name", "first_name last_name", "first_name last_name"]`. Organization names, such as `NASA/JPL/Cornell University` just need to be separated by commas, e.g. `["organization name", "organization name"]` |
 | `date`     | Date                                                                                                                                                    |
 | `abstract` | Description                                                                                                                                             |
 | `license` | See: [Creative Commons](https://creativecommons.org/licenses/) for options|
 
 For the `image_src` value, you'll need to find the URL for the image to paste into that field.
 
-- Click on "Use this File on the Web"
-- Copy the File URL (for example, `https://upload.wikimedia.org/wikipedia/commons/x/xx/FileName.png`)
-- Paste the File URL in the `image_src` field
-- Write alternative text for the image in the `image_alt` field. If you're interested, here's [guidance on writing `alt` tags for complex images, like data visualizations](https://www.w3.org/WAI/tutorials/images/complex/).
+6. Click on "Use this File on the Web"
+7. Copy the File URL (for example, `https://upload.wikimedia.org/wikipedia/commons/x/xx/FileName.png`)
+8. Paste the File URL in the `image_src` field
+9. Write alternative text for the image in the `image_alt` field. If you're interested, here's [guidance on writing `alt` tags for complex images, like data visualizations](https://www.w3.org/WAI/tutorials/images/complex/).
 
 When you're done, you should have two new markdown (`.md`) files in a new `visualizations` folder, which itself is a subfolder of the `content` folder. The exercise files already include a template for rendering the visualizations (in `/layouts/_default/single.html`). If you need to, use the markdown files within the `/papers/` and `/posters/` folders as a reference while you build out the `visualizations` section of the site. 
 
-When you're done creating the pages for the visualizations, you can test to see that everything is working properly by running the `hugo server` command in a terminal and opening a web browser to http://localhost:1313/visualizations/. Make sure that your terminal open to the `static-web-scholcomm-exercise-files` directory for the hugo command to work.
+When you're done creating the markdown (`.md`) files for the visualizations, you can test to see that everything is working properly by running the `hugo server` command in a terminal and opening a web browser to http://localhost:1313/visualizations/. Make sure that your terminal open to the `static-web-scholcomm-exercise-files` directory for the hugo command to work. If your terminal is busy from a previous process, you can stop it by entering `Ctrl+C` in the terminal and restarting the server by entering `hugo server` in the terminal.
 
 ### Templates
 
-Templates are an advanced topic with any static site generator. Not only do you need some basic familiarity with HTML and CSS, you'll also need to learn the basics of whichever templating language the static site generator uses. However, this is a skill that pays off because it provides a new layer of control over your digital publications, opening up new pathways to work with more dynamic content. 
+Templates determine the structure and layout of web pages. In the exersice files, the templates are `.html` files within the `layouts` folder. Templates are an advanced topic with any static site generator. Not only do you need some basic familiarity with HTML and CSS, you'll also need to learn the basics of whichever templating language the static site generator uses. However, this is a skill that pays off because it provides a new layer of control over your digital publications, opening up new pathways to work with more dynamic content. 
 
 Bibliographic metadata is probably the first reason to customize templates. Static site generators can support pretty much any semantic web metadata standard you can think of, but you'll probably have to be the one to implement it since most themes have that template available. 
 
@@ -641,7 +655,11 @@ With templates, we can pull in any YAML or Markdown we need, wherever in our sit
 
 #### Google Scholar
 
+{{< hint info >}}
+
 **Task:** Add Google Scholar `<meta>` tags to the `<head>` element of our HTML markup.
+
+{{< /hint >}}
 
 According to [Google Scholar Indexing guidelines](https://scholar.google.com/intl/en/scholar/inclusion.html#indexing), the crawlers look for `<meta>` HTML tags containing Highwire Press tags, for example:
 
@@ -670,9 +688,13 @@ According to [Google Scholar Indexing guidelines](https://scholar.google.com/int
 
 Templates also allow you to loop over fields with multiple values and apply conditional logic. For example, the `range` function is used to iterate over a list of items, like authors. For each author, the template will create a new `<meta>` tag with the `name="citation_author"` attribute until all authors have been added. The `with` function is similar to `if` statements in other programming languages. In this example, `with` checks to see if the page has defined a `doi` in the YAML front-matter. If so, then Hugo will create a `<meta>` tag with the `name=citation_doi` attribute. Hugo has an extensive list of [functions](https://gohugo.io/functions/) for [creating templates](https://gohugo.io/templates/introduction/). 
 
-Once you've created the file and saved the site, test is by running `hugo server` in a terminal and opening `https://localhost:1313` in a web browser.
+Once you've created the file and saved the site, test it by running `hugo server` in a terminal and opening `https://localhost:1313` in a web browser. Because we are editing web page metadata, and not web page content, we can see the changes we are making by viewing the source of the web page in our browser. You can view the source of any web page by right-clicking the page in your web browser and selecting the `View page source` option. The Google Scholar metadata we are adding to our demo website will appear near the top of the page when you're viewing the page source.
 
-If you're feeling adventurous, try adding DublinCore metadata to the <head> element of the website. Here's the [DublinCore website](https://www.dublincore.org/) and a [simple DublinCore metadata generator for HTML](https://nsteffel.github.io/dublin_core_generator/generator_nq.html)
+{{< hint info >}}
+
+This concludes the introductory tutorial on static site generators with [Hugo](https://gohugo.io/). **Congrats!** The following sections are intended to provide guidance on publishing and archiving static websites in a real-world contexts. 
+
+{{< /hint >}}
 
 {{< hint warning >}}
 
@@ -680,13 +702,13 @@ If you're feeling adventurous, try adding DublinCore metadata to the <head> elem
 
 {{< /hint >}}
 
-## Tips for Publishing Static Websites to the Web
+## Appendix I: Tips for Publishing Static Websites to the Web
 
 Static site generators can build your website to a _local_ or _production_ server environment. 
 
 - **Local Environtment**: This is sometimes called a _development_ environment. When we've been previewing our site with the `hugo server` command, we've been using the _local_ environment. With this environment, the `hugo server` command turns our machines into mini web servers that host and deliver the website in our web browsers at a `localhost` URL. 
 
-- **Production Environment**: When we're ready to deploy the website online, we need to use a different command for a _production_ server environment. With Hugo, this command is simply `hugo`. The `hugo` command will create a new subfolder in your project called `public` that will contain all of the final HTML, CSS, JavaScipt, images, and other asset files (e.g. PDFs, datasets, etc.) you need to have a fully-functioning static website. W
+- **Production Environment**: When we're ready to deploy the website online, we need to use a different command for a _production_ server environment. With Hugo, this command is simply `hugo`. The `hugo` command will create a new subfolder in your project called `public` that will contain all of the final HTML, CSS, JavaScipt, images, and other asset files (e.g. PDFs, datasets, etc.) you need to have a fully-functioning static website. 
 
 One of the primary differences between the `hugo` command and the `hugo server` command is how it handles URLs and permalinks. With `hugo server`, all of the URLs will be relative to a Base URL called `https://localhost:1313` by default. The `hugo` command, however, will set all of your URLs and Permalinks according to whatver you set as the `baseURL` value in the `config.yml` file. The `baseURL` refers to the hostname and path address to your website. For example, if you purchased the `https://example.com` domain name for your website, this line would be in your `config.yml` file: `baseURL: https://example.com`. The `baseURL` can also be a subdomain (`baseURL: https://conference.example.com`) or a subdirectory of a website (`baseURL: https://example.com/conference/`).
 
@@ -704,36 +726,37 @@ The following steps will show you how to move your website files to GitHub and d
 
 _In your Hugo Project Files_
 
-- Open the `config.yml` file and edit the `baseURL: https://YOUR_USERNAME.github.io/conference-proceedings/` line where `YOUR_USERNAME` is replaced with your GitHub username 
-- Run: `hugo` to build your site to the `public` directory
+1. Open the `config.yml` file and add the valye for the `baseURL` field. Use `https://YOURUSERNAME.github.io/conference-proceedings/` where `YOURUSERNAME` is replaced with your GitHub username 
+2. Run: `hugo` to build your site to the `public` directory
 
 _In GitHub_
 
-- Login to GitHub
-- Create a New repository: Title menu `+` > `New Repository`
-- Enter `conference-proceedings` in the `Repository Name` field
-- Click on `Create Repository`; this will display many options to add files to the repository
-- Click on the link that says: `upload an existing file`
-- Upload all of the files within the `public` directory to the Github repository. It is important that the `index.html` file is at the root of your of repository. 
-- Click on the `Commit` button. This will upload your website files, which might take a few moments.
-- When the upload is complete, click on the `Settings` tab
-- Scroll down to the `GitHub Pages` section
-- In the `Source` drop-down menu, select `main`, make sure that `/(root)` path is selected, then click save.
-- This will deploy your website to this URL: `https://YOUR_USERNAME.github.io/conference-proceedings`
+3. Login to GitHub
+4. Create a New repository: Title menu `+` > `New Repository`
+5. Enter `conference-proceedings` in the `Repository Name` field
+6. Click on `Create Repository`; this will display many options to add files to the repository
+7. Click on the link that says: `upload an existing file`
+8. Upload all of the files within the `public` directory to the Github repository. It is important that the `index.html` file is at the root of your of repository. Do not upload the public folder itself; upload the files within the `public` folder
+9. Click on the `Commit` button. This will upload your website files, which might take a few moments.
+10. When the upload is complete, click on the `Settings` tab
+11. Scroll down to the `GitHub Pages` section
+12. In the `Source` drop-down menu, select `main`, make sure that `/(root)` path is selected, then click save.
+13. This will deploy your website to this URL: `https://YOUR_USERNAME.github.io/conference-proceedings`
 
-Static site generators, like open source software in general, make heavy use of the [Git](https://git-scm.com/) version control software. This is a standard workflow for developing and deploying a static site generated website:
+This is all you need to do to manually deploy a website using the GitHub Pages service. Static site generators, like open source software in general, make heavy use of the [Git](https://git-scm.com/) version control software. What we just did was intended to demonstrate a manual deployment of a static website to a public web server. As a reference, here's what a more common workflow would look like: 
 
-- Create your website's project folder: `hugo new site new-website-name`
-- Change directories into the website folder: `cd new-website-name`
-- Initialize a Git repository: `git init`
-- Create and edit your website locally (just as we did earlier in this tutorial)
-- Upload your local Git repository to GitHub:
+1. Create your website's project folder: `hugo new site new-website-name`
+2. Change directories into the website folder: `cd new-website-name`
+3. Initialize a Git repository: `git init`
+4. Create and edit your website locally (just as we did earlier in this tutorial)
+5. Upload your local Git repository to GitHub:
+
 ```
 git remote add origin https://github.com/YOUR_USERNAME/new-website-name.git
 git branch -M main
 git push -u origin main
 ```
-- Set up an automated deployment workflow that pushes a new build of your website to a server with every change to the git repository on GitHub.
+6. Set up an automated deployment workflow that pushes a new build of your website to a server with every change to the git repository on GitHub.
 
 By storing your source code in a GitHub-hosted repository, you can deploy static sites directly to GitHub Pages or third-party services like Netlify for free. 
 
@@ -741,20 +764,20 @@ The Hugo Documentation includes a lot of [hosting and deployment recommendations
 
 ### Netlify
 
-[Netlify](https://www.netlify.com/) is a web hosting company specializing in static websites. They provide free individual accounts, integration with [GitHub](), and numerous 1-click deployment options with popular static site generators. This is a typical workflow with Netlify:
+[Netlify](https://www.netlify.com/) is a web hosting company specializing in static websites. They provide free individual accounts, integration with [GitHub](https://github.com/), and numerous 1-click deployment options with popular static site generators. This is a typical workflow with Netlify:
 
-- Set up a web project with static site generator on a personal computer
-- Initialize a [Git](https://git-scm.com/) repository on the project
-- Push a copy of the repository to [GitHub](https://github.com)
-- Grant Netlify access to GitHub repositories
-- Netlify copies the web project to their servers, build the website, and host the website
-- Updates to web project get pushed to GitHub copy and automatically trigger new website deploys 
+1. Set up a web project with static site generator on a personal computer
+2. Initialize a [Git](https://git-scm.com/) repository on the project
+3. Push a copy of the repository to [GitHub](https://github.com)
+4. Grant Netlify access to GitHub repositories
+5. Netlify copies the web project to their servers, build the website, and host the website
+6. Updates to web project get pushed to GitHub copy and automatically trigger new website deploys 
 
 Automating this workflow can take some time up front, it saves a lot of time over the course of updating the website. Netlify also provides [Netlify Drop](https://app.netlify.com/drop), which is an option to upload the pre-built website folder directlly (no Git/ GitHub integration necessary).
 
 For deploying the conference proceedings website, run the `hugo` command and upload the `/public/` folder to Netlify Drop to make the website available to the public.
 
-## Tips for Archiving Static Websites
+## Appendix II: Tips for Archiving Static Websites
 
 Static websites themselves are not digital repository or preservation systems. They do, however, provide a few options for creating [OAIS Submission Information Packages (SIPs)](https://en.wikipedia.org/wiki/Open_Archival_Information_System#The_OAIS_environment_and_information_model). In fact, it's possible that static websites are easier to archive than database-driven websites, as Rumianek ([2013](http://www.dlib.org/dlib/january13/rumianek/01rumianek.html)) writes:
 
