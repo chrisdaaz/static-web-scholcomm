@@ -10,10 +10,10 @@ These resources introduce this powerful technology for scholarly communications 
 
 ## Contents
 
-- A [lesson plan](/teaching-resources/lesson-plan/) for learning about static web publishing for digital scholarship projects.
-- An [annotated bibliography](/teaching-resources/bibiliography/) of articles, tutorials, and podcasts about static websites in academic contexts.
-- A [quick demonstration](/tutorials/github/) of GitHub as a static website hosting platform 
-- An [introduction to static site generators](/tutorials/static-site-generators/) tutorial
+- A [lesson plan](/static-web-scholcomm/teaching-resources/lesson-plan/) for learning about static web publishing for digital scholarship projects.
+- An [annotated bibliography](/static-web-scholcomm/teaching-resources/bibiliography/) of articles, tutorials, and podcasts about static websites in academic contexts.
+- A [quick demonstration](/static-web-scholcomm/tutorials/github/) of GitHub as a static website hosting platform 
+- An [introduction to static site generators](/static-web-scholcomm/tutorials/static-site-generators/) tutorial
 
 ## Credits
 
