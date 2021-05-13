@@ -137,11 +137,11 @@ Coming to a plain text editor from a word processing program (like Microsoft Wor
 
 ## Static Websites and Accessibility
 
-Static site generators can be a good tool for learning about web accessibility. They give you full control over the HTML templates and CSS styles. Most of the time, the templates and styles are by a theme a theme. Themes are separate components for static site generators that users make and publishing as open source projects. Whether you are using a theme or creating your templates from scratch, it is your responsibility to ensure that the resulting web publication can be used by everyone. 
+Static site generators can be a good tool for learning about web accessibility. They give you full control over the HTML templates and CSS styles. Most of the time, the templates and styles are by a theme. Themes are separate components for static site generators that users make and publishing as open source projects. Whether you are using a theme or creating your templates from scratch, it is your responsibility to ensure that the resulting web publication can be used by everyone. 
 
 From an authoring standpoint, plain text is a more accessible format than rich text. [Seo and McCurry (2019)](http://dspace.calstate.edu/handle/10211.3/210398) study the accessibility of authoring tools for scientific documents (i.e. documents that require math formulas, embedded graphics, figures, and bibiliographic citations) and introduce the [Accessible RMarkdown Online Writer](http://www.arowtool.com/), a web-based authoring tool for blind and low-vision writers of scientific content. Markdown, as an accessible authoring format, is a semantically rich plain text format with a minimal syntax, support for LaTeX math, and wide range of output formats: HTML, PDF, Microsoft Word, RTF, EPUB, PowerPoint, etc. 
 
-Markdown is independent of static websites and static site generators. Markdown can be use in content management systems and dynamic website platforms, too. Regardless of your web technology stack, distributing multiple formats of your content to your audience, such as Markdown _in addition to_ HTML or PDF, provides choice for people to access your work. With static site generators --and web-hosted git repositories-- distributing the Markdown source of works is trivial. 
+Markdown is independent of static websites and static site generators. Markdown can be used in content management systems and dynamic website platforms, too. Regardless of your web technology stack, distributing multiple formats of your content to your audience, such as Markdown _in addition to_ HTML or PDF, provides choice for people to access your work. With static site generators --and web-hosted git repositories-- distributing the Markdown source of works is trivial. 
 
 {{< hint warning >}}
 
@@ -173,7 +173,7 @@ Markdown is independent of static websites and static site generators. Markdown 
 
 ### Popular Static Site Generators
 
-All static site generators have a similar workflow: (1) install the software, (2) add your content, (3) run the `build` or `serve` command from your terminal, (4) upload the files to a server. That said, some static site generators are easier to use than others. In my experience with open source, the popularity of the tool correlates with its easy of use. Here's a very incomplete overview of some popular static site generators.  
+All static site generators have a similar workflow: (1) install the software, (2) add your content, (3) run the `build` or `serve` command from your terminal, (4) upload the files to a server. That said, some static site generators are easier to use than others. In my experience with open source, the popularity of the tool correlates with its ease of use. Here's a very incomplete overview of some popular static site generators.  
 
 #### Jekyll
 
