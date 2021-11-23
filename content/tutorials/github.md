@@ -42,7 +42,7 @@ The textbook template comes with a workflow file that generates the output files
 
 ## Customize Your Open Textbook
 
-The `minibookdown` repository we forked to your GitHub account contains the bare minimum of a [Bookdown](https://bookdown.org) project. Bookdown is a popular open source tool for writing and publishing technical and scientific books from [R Markdown](https://rmarkdown.rstudio.com/) files. We don't need to know anything about the R programming language or statical computing to use Bookdown for formating and publishing open textbooks. Bookdown will generate PDF, HTML, EPUB, and Word document versions of our open textbook for us.
+The `minibookdown` repository we forked to your GitHub account contains the bare minimum of a [Bookdown](https://bookdown.org) project. Bookdown is a popular open source tool for writing and publishing technical and scientific books from [R Markdown](https://rmarkdown.rstudio.com/) files. We don't need to know anything about the R programming language or statistical computing to use Bookdown for formating and publishing open textbooks. Bookdown will generate PDF, HTML, EPUB, and Word document versions of our open textbook for us.
 
 GitHub, in addition to being a host for source code files, is also a basic file editing system. 
 
