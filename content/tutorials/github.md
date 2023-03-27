@@ -26,9 +26,7 @@ First, log in to your [GitHub](https://github.com) account. We will copy and ada
 
 1. Visit this repository: https://github.com/chrisdaaz/minibookdown
 2. Click on the `Code` tab in the repository view
-3. Click on the `Fork` button near the top of the page
-
-{{< figure src="/static-web-scholcomm/fork.png" title="Fork the Repository" >}}
+3. Click on the `Use this template` button near the top of the page >> Create a new repository
 
 The `minibookdown` repository contains the code we will need to begin creating your own open textbook. You should now have a repository under your account at a web address that looks like this: `https://github.com/YOUR_USERNAME/minibookdown`
 
@@ -36,9 +34,12 @@ The `minibookdown` repository contains the code we will need to begin creating y
 
 The textbook template comes with a workflow file that generates the output files for the book (i.e. the HTML, PDF, and EPUB versions). We'll need to enable the workflow file in GitHub:
 
-{{< figure src="/static-web-scholcomm/actions.png" title="Enable Workflows in GitHub Actions" caption="Click on the `Actions` tab" >}}
+### Grant read and write permissions to GitHub Actions
 
-- Click on the `I understand my workflows, go ahead and enable them` button
+- Go to the **Settings** tab
+- Click on the **Actions** sidebar item, select "General"
+- Under workflow permissions, select the "Read and write permissions" radio button
+- Click on Save
 
 ## Customize Your Open Textbook
 
@@ -81,8 +82,10 @@ Before we can view the web version of our textbook, we have to turn on the GitHu
 
 {{< figure src="/static-web-scholcomm/settings.png" title="Enable GitHub Pages in Repository Settings" caption="Click on the `Settings` tab" >}}
 
-1. Scroll down to the `GitHub Pages` heading
-2. In the `Source` section, click on the drop-down menu and change `None` to `gh-pages` +  `/(root}`
-3. Click the `Save` button
+- Go to the **Settings** tab
+- Click on the **Pages** sidebar item
+- Under the "Build and deployment" settings, change the **Source** to "Deploy from a Branch"
+- Under the "Branch" settings, change to `gh-pages` branch with the `/(root)` directory setting
+- Click on Save
 
 You now have a publicly available open textbook on GitHub. You can view it by going to [https://your-github-username.github.io/minibookdown/](https://your-github-username.github.io/minibookdown/).
