@@ -14,16 +14,16 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Install pandoc and LaTeX
-        run: |
-          brew install pandoc
-          brew install --cask mactex-no-gui
+      #- name: Install pandoc and LaTeX
+      #  run: |
+      #    brew install pandoc
+      #    brew install --cask mactex-no-gui
           
-      - name: Refresh terminal
-        run: eval "$(/usr/libexec/path_helper)"
+      #- name: Refresh terminal for mactex to work
+      #  run: eval "$(/usr/libexec/path_helper)"
 
-      - name: Build Downloads  
-        run: bash pdf-docx.sh
+      #- name: Build Downloads  
+      #  run: bash pdf-docx.sh
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
